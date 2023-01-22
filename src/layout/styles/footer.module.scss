@@ -1,0 +1,11 @@
+footer {
+  padding: 1rem;
+  .video {
+    border-radius: 2rem;
+    width: 100%;
+    height: 90vh;
+    border: 1px solid black;
+    object-fit: cover;
+    object-position: center;
+  }
+}

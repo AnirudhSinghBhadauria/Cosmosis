@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-y: hidden;
+  .container {
+    width: 65%;
+    height: 99.9vh;
+  }
+  main {
+    border: 1px solid rgb(255, 0, 0);
+    padding: 1rem;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}

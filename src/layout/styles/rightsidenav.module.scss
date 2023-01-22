@@ -1,0 +1,106 @@
+@import "../../../base.scss";
+
+.rightSideWrapper {
+  @include flex(column, space-between, flex-end);
+  background-color: $light-grey-assent;
+  border-radius: 2rem 0rem 0rem 2rem;
+  font-family: satoshi;
+  padding: 1.5rem;
+  height: 100vh;
+  width: 30rem;
+
+  .cardContainer {
+    @include flex(column, center, center);
+    gap: 1.25rem;
+  }
+  .svgContainer {
+    @include flex(row, center, center);
+    padding-right: 1rem;
+  }
+}
+
+img {
+  opacity: 0;
+}
+
+.baseClass {
+  @include flex(row, center, center);
+  transition: all 200ms ease-in-out;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  section:nth-of-type(1) {
+    flex: 1;
+  }
+  section:nth-of-type(2) {
+    flex: 3;
+  }
+
+  &:nth-of-type(1) {
+    background-color: $light-pink;
+  }
+  &:nth-of-type(2) {
+    background-color: $light-blue;
+  }
+  &:nth-of-type(3) {
+    background-color: $light-yellow;
+  }
+  &:nth-of-type(4) {
+    background-color: $light-green;
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+    path {
+      fill: $dark-navy-blue;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+}
+
+.isActive {
+  &:nth-of-type(1),
+  &:nth-of-type(2),
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    background-color: $light-purple;
+  }
+}
+
+.bottomContainer {
+  @include flex(row, space-between, center);
+  width: 100%;
+
+  .profileContainer {
+    @include flex(row, center, center);
+    // border: 1px solid white;
+    height: 3.5rem;
+    .profile {
+      opacity: 1;
+      height: 2.75rem;
+      width: 2.75rem;
+      border-radius: 1.5rem;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+    .green {
+      width: 8px;
+      height: 8px;
+      align-self: flex-start;
+      background-color: $warning;
+      border-radius: 1rem;
+    }
+  }
+
+  .buttonContainer {
+    gap: 0.75rem;
+    display: flex;
+  }
+}

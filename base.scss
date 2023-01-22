@@ -1,0 +1,21 @@
+$white: whitesmoke;
+
+$light-pink: #ffb3c6;
+$light-blue: #a6e1fa;
+$light-yellow: #fcf6bd;
+$light-green: #95d5b2;
+$light-purple: #b8b8ff;
+
+$dark-navy-blue: #0a2472;
+
+$light-grey-assent: #2d2f31;
+
+$warning: #ff4976;
+$sucsess: #95d5b2;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
