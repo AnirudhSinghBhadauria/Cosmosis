@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap");
 @font-face {
   font-family: satoshi;
-  src: url(/src/assets/Font/Satoshi-Bold.otf);
+  src: url(./src/assets/Font/Satoshi-Bold.otf);
 }
 * {
   margin: 0;
@@ -20,4 +21,3 @@ body {
 *:focus {
   outline: none;
 }
-

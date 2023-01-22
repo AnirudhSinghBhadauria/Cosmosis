@@ -7,11 +7,11 @@ import { NavLink } from "react-router-dom";
 import CardContent from "../components/CardContent";
 import Button from "../components/Button";
 import { useState } from "react";
+import { profilePlaceHolderImage } from "../assets/Links";
 
 const RightSideNav = () => {
-  const [profilePicture, setProfilePicture] = useState(
-    "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-  );
+  const [profilePicture, setProfilePicture] = useState(profilePlaceHolderImage);
+  
   return (
     <div className={classes.rightSideWrapper}>
       <aside className={classes.cardContainer}>

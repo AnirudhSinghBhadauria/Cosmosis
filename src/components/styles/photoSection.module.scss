@@ -1,0 +1,6 @@
+@import '../../../base.scss';
+
+.imageHolder {
+     @include flex(row, flex-end, center);
+     gap: 1rem;
+}

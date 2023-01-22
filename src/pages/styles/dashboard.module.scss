@@ -1,0 +1,62 @@
+@import "../../../base.scss";
+
+.forefrount {
+  border-radius: 1.5rem;
+  height: 95vh;
+  // background: $dark-grey-assent;
+  //   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(31,31,31,1) 100%);
+  //   border: 1px solid white;
+
+  .headingSection {
+    //     border: 1px solid white;
+    @include flex(column, center, flex-start);
+    padding: 3rem;
+    padding-bottom: 0;
+    color: white;
+
+    p {
+      font-family: $thin-font;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 300;
+    }
+    h1 {
+      font-family: $heading-font;
+      font-size: clamp(4.35rem, 9.5vw, 9rem);
+    }
+  }
+
+  .dotContainer {
+    @include flex(row, space-between, center);
+    padding: 0rem 5rem;
+    color: white;
+    font-size: 1.15rem;
+    font-family: $heading-font;
+  }
+
+  .imageWrapper {
+    @include flex(row, center, center);
+    padding: 2rem 5rem;
+
+    .singleDotContainer {
+      flex: 1;
+      align-self: flex-end;
+      color: white;
+      font-family: $heading-font;
+      font-size: 1.25rem;
+    }
+
+    .imageContainer {
+      @include flex(column, center, space-evenly);
+      gap: 1rem;
+      flex: 4;
+      
+      div {
+           @include flex(row, flex-end, center);
+           gap: 1rem;
+      }
+    }
+  }
+  img {
+    opacity: 1;
+  }
+}

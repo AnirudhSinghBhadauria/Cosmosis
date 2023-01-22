@@ -9,9 +9,13 @@ $light-purple: #b8b8ff;
 $dark-navy-blue: #0a2472;
 
 $light-grey-assent: #2d2f31;
+$dark-grey-assent: #171819;
 
 $warning: #ff4976;
 $sucsess: #95d5b2;
+
+$heading-font :satoshi, sans-serif;
+$thin-font : 'Oswald', sans-serif;
 
 @mixin flex($direction, $justify, $align) {
   display: flex;

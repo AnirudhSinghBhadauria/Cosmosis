@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./styles/cardContent.module.scss";
+import { linkImage } from "../assets/Links";
 
 const CardContent = (props) => {
   return (
@@ -9,11 +10,7 @@ const CardContent = (props) => {
     >
       <span className={classes.headingContainer}>
         <h1>{props.heading}</h1>
-        <img
-          className={classes.link}
-          alt='link'
-          src="https://img.icons8.com/material-rounded/15/null/link--v1.png"
-        />
+        <img className={classes.link} alt="link-image" src={linkImage} />
       </span>
       <p>{props.desc}</p>
     </section>
