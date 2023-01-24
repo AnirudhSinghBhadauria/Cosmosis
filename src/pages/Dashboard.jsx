@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
-import { profilePlaceHolderImage } from "../assets/Links";
+import { heavenAndHell, profilePlaceHolderImage } from "../assets/Links";
 import HeroPhotoSection from "../components/HeroPhotoSection";
 import classes from "./styles/dashboard.module.scss";
+import Sidestrands from "../assets/SVG-Components/Sidestrands";
+import FaceComponent from "../components/FaceComponent";
+import FeatureComponent from "../components/FeatureComponent";
 
 const Dashboard = () => {
   return (
@@ -26,6 +29,45 @@ const Dashboard = () => {
           </section>
         </div>
       </section>
+
+      <section className={classes.sectionTwo}>
+        <div className={classes.textContainer}>
+          <section>
+            <p>C.III S.IX</p>
+            <h1>
+              ONE <br /> VOICE <br /> IN THE <br /> COSMIC <br /> FUGUE
+            </h1>
+          </section>
+
+          <section>
+            <p>o o</p>
+            <div>
+              <p>
+                Man is bound by his own action except when it is performed for
+                the sake of sacrifice.
+              </p>
+              <br />
+              <p>- BHAGAVAD GITA</p>
+            </div>
+            <p>o o</p>
+          </section>
+        </div>
+
+        <div className={classes.strandContainer}>
+          <Sidestrands />
+        </div>
+      </section>
+
+      <FeatureComponent />
+
+      <FaceComponent
+        number="C.XXI S.XXXII"
+        heading="HEAVEN AND HELL"
+        quote="I am Death, dystroyer of Worlds."
+        author="- LORD KRISHNA"
+      >
+        <img src={heavenAndHell} alt="heaven and hell" />
+      </FaceComponent>
     </Fragment>
   );
 };

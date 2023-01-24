@@ -1,16 +1,24 @@
-
 // -------------------------Dashboard-Photo-Section-----------------------------
 export const image1 =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-cube-100.png?alt=media&token=dc3d6c13-6ed3-46a8-8a7b-56a5d9a0d7cf";
 export const image2 =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-circles-100.png?alt=media&token=215141f1-f371-448b-8a17-23acb14881d6";
-export const image3 = "";
-export const image4 = "";
-export const image5 = "";
-export const image6 = "";
-export const image7 = "";
-export const image8 = "";
-export const image9 = "";
+export const image3 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Fcircle.png?alt=media&token=abdd35ca-69c9-48a0-b8f5-388dd0dbc861";
+export const image4 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-final-state-100.png?alt=media&token=ee19882f-f96e-4155-a5d3-d5ca82f8b674";
+export const image5 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-biotech-100.png?alt=media&token=6b7e312d-1d1c-4283-b45a-508e4f3a3429";
+export const image6 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-striped-patterns-100.png?alt=media&token=f3454d6a-23eb-46b3-9598-89b443f64025";
+export const image7 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-space-100.png?alt=media&token=6143c205-8149-4326-8ea9-12fd20b75578";
+export const image8 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-mars-100.png?alt=media&token=05e240d2-da78-43b0-ab69-18627b5732d4";
+export const image9 =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-rocket-100.png?alt=media&token=23bcc861-3c61-45bc-8ba5-6377f009125e";
+
+  
 
 // -------------------------Footer-video-----------------------------
 export const footerVideo =
@@ -22,3 +30,6 @@ export const linkImage =
 
 export const profilePlaceHolderImage =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/profile%20%20pic.webp?alt=media&token=f19db2fd-c660-4ae0-9635-b1c0a5451e12";
+
+
+export const heavenAndHell = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/heaven%20and%20hell.png?alt=media&token=b26b454e-3b4a-421f-b7e8-b802ba1dd213'

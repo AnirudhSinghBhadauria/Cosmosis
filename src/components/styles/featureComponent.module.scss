@@ -1,0 +1,57 @@
+@import "../../../base.scss";
+
+.feature {
+  @include flex(column, flex-start, flex-start);
+  background: $gradient;
+  color: white;
+  padding: 1rem 4rem;
+  gap: 1rem;
+
+  &:hover {
+    h1 {
+      color: $light-yellow;
+    }
+  }
+
+  div {
+    @include flex(row, space-between, center);
+    width: 100%;
+    padding-right: 3.5rem;
+    h1 {
+      font-family: $heading-font;
+      font-size: $small-main-heading-size;
+    }
+  }
+
+  p {
+    font-family: $heading-font;
+    font-size: 1.2rem;
+    max-width: 35rem;
+  }
+  .link {
+    @include flex(row, flex-start, center);
+    gap: 1rem;
+    color: white;
+    font-family: $heading-font;
+    font-size: 1.1rem;
+
+    svg {
+      transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &:hover {
+      color: $light-yellow;
+      
+      svg {
+        line {
+          stroke: $light-yellow;
+        }
+        transform: translateX(20px);
+      }
+    }
+    img {
+      opacity: 1;
+    }
+  }
+
+}

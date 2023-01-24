@@ -16,7 +16,7 @@ a {
   color: black;
 }
 body {
-  background-color: rgb(16, 16, 16);
+  background-color: #101010;
 }
 *:focus {
   outline: none;

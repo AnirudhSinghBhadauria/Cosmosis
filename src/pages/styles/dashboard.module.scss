@@ -1,14 +1,14 @@
 @import "../../../base.scss";
 
 .forefrount {
-  border-radius: 1.5rem;
+  background: $dark-grey-assent;
+  background: $gradient;
+  border-radius: $border-radius;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
   height: 95vh;
-  // background: $dark-grey-assent;
-  //   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(31,31,31,1) 100%);
-  //   border: 1px solid white;
 
   .headingSection {
-    //     border: 1px solid white;
     @include flex(column, center, flex-start);
     padding: 3rem;
     padding-bottom: 0;
@@ -16,12 +16,12 @@
 
     p {
       font-family: $thin-font;
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-size: $big-secondary-heading-size;
       font-weight: 300;
     }
     h1 {
       font-family: $heading-font;
-      font-size: clamp(4.35rem, 9.5vw, 9rem);
+      font-size: $big-main-heading-size;
     }
   }
 
@@ -47,16 +47,65 @@
 
     .imageContainer {
       @include flex(column, center, space-evenly);
-      gap: 1rem;
+      gap: 1.75rem;
       flex: 4;
-      
+
       div {
-           @include flex(row, flex-end, center);
-           gap: 1rem;
+        @include flex(row, flex-end, center);
+        gap: 1.75rem;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
       }
     }
   }
   img {
     opacity: 1;
+  }
+}
+
+.sectionTwo {
+  @include flex(row, space-between, center);
+  padding: 1rem 6rem 1rem 4rem;
+  background: $gradient;
+
+  .textContainer {
+    @include flex(column, flex-start, flex-start);
+    color: white;
+    gap: 4rem;
+
+    section:nth-of-type(1) {
+      flex: 3;
+      p {
+        font-size: $small-secondary-heading-size;
+        font-family: $thin-font;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-family: $heading-font;
+        font-size: $small-main-heading-size;
+        line-height: 6rem;
+      }
+    }
+
+    section:nth-of-type(2) {
+      @include flex(column, flex-start, flex-start);
+      flex: 1;
+      gap: 1rem;
+
+      p {
+        font-family: $thin-font;
+        max-width: 10rem;
+        font-size: 1.05rem;
+      }
+    }
+  }
+
+  svg {
+    width: 100px;
+    height: 921px;
   }
 }
