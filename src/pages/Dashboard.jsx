@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { heavenAndHell, profilePlaceHolderImage } from "../assets/Links";
+import { heavenAndHell } from "../assets/Links";
 import HeroPhotoSection from "../components/HeroPhotoSection";
 import classes from "./styles/dashboard.module.scss";
 import Sidestrands from "../assets/SVG-Components/Sidestrands";
@@ -11,7 +11,7 @@ const Dashboard = () => {
     <Fragment>
       <section className={classes.forefrount}>
         <div className={classes.headingSection}>
-          <p>CARL SAGAN</p>
+          <p>VOID</p>
           <h1>COSMOSIS</h1>
         </div>
 
@@ -58,7 +58,39 @@ const Dashboard = () => {
         </div>
       </section>
 
-      <FeatureComponent />
+      <FeatureComponent
+        paraOne="Astronomy Picture of the Day. The pictures and descriptions often
+          relate to current events in astronomy and space exploration."
+        paraTwo="Each day a different image or photograph of our fascinating universe
+          is featured, along with a brief explanation written by a professional
+          astronomer."
+        feature="APOD"
+        path="/apod"
+      />
+
+      <FeatureComponent
+        paraOne="Each day a different image or photograph of our fascinating universe
+        is featured in APOD,"
+        paraTwo=" In this section, Any APOD of any particular date can be found out along with a  brief explanation written by a professional astronomer."
+        feature="K-POD"
+        path="/k-pod"
+      />
+
+      <FeatureComponent
+        paraOne="Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory mission."
+        paraTwo="NASA's Curiosity rover is currently roaming Mars' landscape cliking pictures and looking for signs of life and learning about the Red Planet's unique environment."
+        paraThree='This section features Pictures that Curosity captured today. (If Any)'
+        feature="CUROSITY"
+        path="/curosity"
+      />
+
+      <FeatureComponent
+        paraOne="The Indian Space Research Organisation is the national space agency of India, headquartered in Bengaluru."
+        paraTwo="ISRO is the research and development wing of DOS and is responsible for the execution of the national space programme."
+        paraThree='This Section enlightens Struggles and Sucess of this prestigious organisation.'
+        feature="ISRO"
+        path="/isro"
+      />
 
       <FaceComponent
         number="C.XXI S.XXXII"
