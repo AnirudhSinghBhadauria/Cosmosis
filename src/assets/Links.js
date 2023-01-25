@@ -18,7 +18,12 @@ export const image8 =
 export const image9 =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-rocket-100.png?alt=media&token=23bcc861-3c61-45bc-8ba5-6377f009125e";
 
-  
+export const redPlanet =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/mars%20planet.webp?alt=media&token=fe845de6-6322-42b4-9dc4-eef825f2f11f";
+
+export const threeCircle = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Group%2027.webp?alt=media&token=40ef5331-3c2e-4280-8520-200b3ee5e0ff';
+
+export const cube = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Group%2029.webp?alt=media&token=43bbb64a-8ef1-4f11-a8e9-476f6632e664'
 
 // -------------------------Footer-video-----------------------------
 export const footerVideo =
@@ -31,5 +36,5 @@ export const linkImage =
 export const profilePlaceHolderImage =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/profile%20%20pic.webp?alt=media&token=f19db2fd-c660-4ae0-9635-b1c0a5451e12";
 
-
-export const heavenAndHell = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/heaven%20and%20hell.png?alt=media&token=b26b454e-3b4a-421f-b7e8-b802ba1dd213'
+export const heavenAndHell =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/heaven%20and%20hell.webp?alt=media&token=598e76f9-544d-46b6-a956-ab799ab8b076";

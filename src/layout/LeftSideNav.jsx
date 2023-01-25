@@ -30,7 +30,7 @@ const LeftSideNav = () => {
         </NavLink>
 
         <NavLink
-          to="/know-your-apod"
+          to="/k-pod"
           className={({ isActive }) =>
             isActive ? `${styles.active}` : `${styles.unActive}`
           }
@@ -39,7 +39,7 @@ const LeftSideNav = () => {
         </NavLink>
 
         <NavLink
-          to="/curosity-rover"
+          to="/curosity"
           className={({ isActive }) =>
             isActive ? `${styles.active}` : `${styles.unActive}`
           }

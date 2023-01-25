@@ -66,6 +66,7 @@ const Dashboard = () => {
           astronomer."
         feature="APOD"
         path="/apod"
+        ifLink = 'true'
       />
 
       <FeatureComponent
@@ -74,22 +75,25 @@ const Dashboard = () => {
         paraTwo=" In this section, Any APOD of any particular date can be found out along with a  brief explanation written by a professional astronomer."
         feature="K-POD"
         path="/k-pod"
+        ifLink = 'true'
       />
 
       <FeatureComponent
         paraOne="Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory mission."
         paraTwo="NASA's Curiosity rover is currently roaming Mars' landscape cliking pictures and looking for signs of life and learning about the Red Planet's unique environment."
-        paraThree='This section features Pictures that Curosity captured today. (If Any)'
+        paraThree="This section features Pictures that Curosity captured today. (If Any)"
         feature="CUROSITY"
         path="/curosity"
+        ifLink = 'true'
       />
 
       <FeatureComponent
         paraOne="The Indian Space Research Organisation is the national space agency of India, headquartered in Bengaluru."
         paraTwo="ISRO is the research and development wing of DOS and is responsible for the execution of the national space programme."
-        paraThree='This Section enlightens Struggles and Sucess of this prestigious organisation.'
+        paraThree="This Section enlightens Struggles and Sucess of this prestigious organisation."
         feature="ISRO"
         path="/isro"
+        ifLink = 'true'
       />
 
       <FaceComponent

@@ -38,7 +38,7 @@ const RightSideNav = () => {
         </NavLink>
 
         <NavLink
-          to="/know-your-apod"
+          to="/k-pod"
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -82,7 +82,7 @@ const RightSideNav = () => {
         </NavLink>
 
         <NavLink
-          to="/curosity-rover"
+          to="/curosity"
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
