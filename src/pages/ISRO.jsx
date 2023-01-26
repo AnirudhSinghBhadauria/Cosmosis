@@ -1,9 +1,77 @@
-import React from 'react'
+import React, { Fragment } from "react";
+import { earthTop, isroCycle1, isroCycle2 } from "../assets/Links";
+import classes from "./styles/isro.module.scss";
+import { HomiBhabha, VikramSarabhai } from "../assets/data";
+import ScientistSection from "../components/ScientistSection";
 
 const ISRO = () => {
   return (
-    <div>ISRO</div>
-  )
-}
+    <Fragment>
+      <section className={classes.earthSection}>
+        <div>
+          <h1>
+            ISRO: <br /> A REACH FOR STARS.
+          </h1>
+          <p>
+            ISRO is India's primary agency for performing tasks related to space
+            exploration. technologies
+          </p>
+        </div>
+        <div>
+          <img src={earthTop} alt="earth" />
+        </div>
+        <div>
+          <p>
+            The Indian National Committee for Space Research (INCOSPAR) was
+            established by Jawaharlal Nehru.
+          </p>
+          <p>
+            Vikram Sarabhai was the founder of ISRO. ISRO was formed on August
+            15, 1969.
+          </p>
+        </div>
+      </section>
 
-export default ISRO
+      <ScientistSection
+        image={HomiBhabha.image}
+        quote={HomiBhabha.quote}
+        year={HomiBhabha.year}
+        name={HomiBhabha.name}
+        paraOne={HomiBhabha.paraOne}
+        paraTwo={HomiBhabha.paraTwo}
+        paraThree={HomiBhabha.paraThree}
+        paraFour={HomiBhabha.paraFour}
+      />
+
+      <section className={classes.firstPhotoSection}>
+        <p>
+          In 1963 Indian Space Research Organization (ISRO) launched its first
+          rocket from Thumba Equatorial Launching Station,the rocket was
+          transported to lift-off pad ON A BICYCLE.
+        </p>
+        <img src={isroCycle1} alt="isro cycle one" />
+      </section>
+
+      <ScientistSection
+        image={VikramSarabhai.image}
+        quote={VikramSarabhai.quote}
+        year={VikramSarabhai.year}
+        name={VikramSarabhai.name}
+        paraOne={VikramSarabhai.paraOne}
+        paraTwo={VikramSarabhai.paraTwo}
+        paraThree={VikramSarabhai.paraThree}
+        paraFour={VikramSarabhai.paraFour}
+      />
+
+      <section className={classes.secondPhotoSection}>
+        <img src={isroCycle2} alt="Second Photo Section" />
+        <p>
+          The first rocket was so light and small that it was transported on a
+          bicycle to the Thumba Launching Station in Thiruvananthapuram, Kerala.
+        </p>
+      </section>
+    </Fragment>
+  );
+};
+
+export default ISRO;

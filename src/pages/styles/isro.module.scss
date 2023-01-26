@@ -1,0 +1,75 @@
+@import "../../../base.scss";
+
+.earthSection {
+  @include flex(column, center, space-evenly);
+  position: relative;
+  background: $gradient;
+  color: white;
+  height: 95vh;
+
+  div {
+    width: 100%;
+    padding: 1rem;
+    @include flex(row, space-between, center);
+
+    h1 {
+      font-family: $heading-font;
+      font-size: 3rem;
+      max-width: 15rem;
+      line-height: 3rem;
+    }
+    p {
+      font-family: $heading-font;
+      text-transform: capitalize;
+      max-width: 10rem;
+    }
+  }
+  div:nth-of-type(1) {
+    position: absolute;
+    top: 1rem;
+  }
+  div:nth-of-type(2) {
+    @include flex(row, center, center);
+  }
+  div:nth-of-type(3) {
+    position: absolute;
+    bottom: 1rem;
+  }
+  img {
+    opacity: 1;
+  }
+}
+
+.firstPhotoSection {
+  @include flex(row, space-evenly, center);
+  background: $gradient;
+  color: white;
+  padding-block: 5rem;
+
+  img {
+    width: 564px;
+    height: 400px;
+    opacity: 1;
+  }
+  p {
+    max-width: 20rem;
+    font-family: $heading-font;
+  }
+}
+.secondPhotoSection {
+  @include flex(row, space-evenly, center);
+  background: $gradient;
+  color: white;
+  padding-block: 5rem;
+
+  img {
+    width: 400px;
+    height: 548px;
+    opacity: 1;
+  }
+  p {
+    max-width: 20rem;
+    font-family: $heading-font;
+    font-size: 1.15rem;
+  }
+}

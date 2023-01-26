@@ -13,7 +13,7 @@ const Curosity = () => {
         quote="In the Archads of the gods, he watches the canals. . ."
         author="- EMUNA ELISH"
       >
-        <img src={redPlanet} />
+        <div className={classes.redPlanet}></div>
       </FaceComponent>
 
       <FeatureComponent

@@ -1,0 +1,58 @@
+@import "../../../base.scss";
+
+.scientistContainer {
+  @include flex(row, space-between, flex-start);
+  color: white;
+  background: $gradient;
+  padding: 5rem 1rem 3rem 1rem;
+  transition: box-shadow 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  img {
+    width: 40rem;
+    height: 40rem;
+    opacity: 1;
+    border-end-end-radius: 50%;
+    border-top-left-radius: 40%;
+    box-shadow: inset 0 0 0 4rem #1f1f1f;
+    transition: box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover{
+     box-shadow: inset 0 0 4rem 5rem #1f1f1f;
+    }
+  }
+  div {
+    p {
+      transform: translate(-10rem, 10rem);
+      font-family: $heading-font;
+      max-width: 15rem;
+      font-size: 1.35rem;
+    }
+  }
+}
+
+.about {
+  @include flex(column, space-evenly, center);
+  background: $gradient;
+  color: rgba(255, 255, 255, 0.852);
+  padding: 1rem;
+  gap: 2rem;
+
+  div:nth-of-type(1) {
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-family: $heading-font;
+      text-align: left;
+    }
+  }
+
+  div:nth-of-type(2) {
+    @include flex(row, space-evenly, center);
+    gap: 2rem;
+    padding: 1rem;
+
+    p {
+      font-family: $heading-font;
+      max-width: 15rem;
+    }
+  }
+}
