@@ -3,10 +3,33 @@ import { earthTop, isroCycle1, isroCycle2 } from "../assets/Links";
 import classes from "./styles/isro.module.scss";
 import { HomiBhabha, VikramSarabhai } from "../assets/data";
 import ScientistSection from "../components/ScientistSection";
+import IsroSVG from "../assets/SVG-Components/IsroSVG";
 
 const ISRO = () => {
   return (
     <Fragment>
+      <section className={classes.main}>
+        <div className={classes.container}>
+          <section className={classes.textContainer}>
+            <p>ISRO</p>
+            <p>ISRO</p>
+            <p>ISRO</p>
+            <p>ISRO</p>
+          </section>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c"
+            alt="floating Astronaut"
+          />
+        </div>
+        <aside>
+          <section>
+            <p>IN SERVICE OF MANKIND.</p>
+            <h1>SPACE TECHNOLOGY</h1>
+          </section>
+          <div></div>
+        </aside>
+      </section>
+
       <section className={classes.earthSection}>
         <div>
           <h1>

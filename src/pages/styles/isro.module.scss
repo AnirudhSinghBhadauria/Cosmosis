@@ -1,5 +1,89 @@
 @import "../../../base.scss";
 
+.main {
+  @include flex(row, space-evenly, center);
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: black;
+
+  .container {
+    position: relative;
+    .textContainer {
+      padding: 2rem;
+      p {
+        line-height: clamp(6.25rem, 12.5vw, 12rem);
+        font-size: clamp(7.75rem, 15.5vw, 15rem);
+        font-family: $fat-font;
+        font-weight: 800;
+        letter-spacing: 1rem;
+      }
+      p:nth-of-type(1) {
+        color: #ebeaea;
+      }
+      p:nth-of-type(2),
+      p:nth-of-type(3),
+      p:nth-of-type(4) {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #ebeaeae2;
+      }
+    }
+    img {
+      width: clamp(23rem, 46vw, 45.5rem);
+      height: clamp(23rem, 46vw, 45.5rem);
+      opacity: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: astro 3s linear infinite both;
+    }
+    @keyframes astro {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      33% {
+        -webkit-transform: translateY(-0.5rem);
+        transform: translateY(-0.5rem);
+      }
+      66% {
+        -webkit-transform: translateY(0.5rem);
+        transform: translateY(0.5rem);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+  }
+
+  aside {
+    @include flex(column, space-between, center);
+    color: #ebeaea;
+
+    section {
+      writing-mode: vertical-lr;
+      margin-bottom: 5rem;
+      h1 {
+        font-family: $fat-font;
+        font-size: 2rem;
+      }
+      p {
+
+        font-family: $heading-font;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+    }
+
+    div {
+      width: 2rem;
+      height: 15rem;
+      border: 1px solid #ebeaea;
+    }
+  }
+}
+
 .earthSection {
   @include flex(column, center, space-evenly);
   position: relative;

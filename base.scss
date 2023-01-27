@@ -20,18 +20,18 @@ $gradient: linear-gradient(
   rgba(31, 31, 31, 1) 100%
 );
 
-$border-radius : 1.5rem;
+$border-radius: 1.5rem;
 
 // TYPO -----------------------------
-$heading-font :satoshi, sans-serif;
-$thin-font : 'Oswald', sans-serif;
+$heading-font: "Satoshi", sans-serif;
+$thin-font: "Oswald", sans-serif;
+$fat-font: "Excon", sans-serif;
 
 $small-main-heading-size: clamp(3.5rem, 7vw, 6.5rem);
 $small-secondary-heading-size: clamp(1.125rem, 2.25vw, 1.75rem);
 
 $big-main-heading-size: clamp(4.35rem, 9.5vw, 9rem);
 $big-secondary-heading-size: clamp(1.5rem, 2.5vw, 2rem);
-
 
 @mixin flex($direction, $justify, $align) {
   display: flex;

@@ -2,9 +2,17 @@ import React, { Fragment } from "react";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { threeCircle } from "../assets/Links";
-import classes from './styles/apod.module.scss'
+import classes from "./styles/apod.module.scss";
+import useHttps from "../hooks/useHttps";
 
 const APOD = () => {
+  const { requestError, requstLoading, sendRequest } = useHttps(
+    config,
+    getDataFromUseHttps
+  );
+
+  const config = { url: "" };
+
   return (
     <Fragment>
       <FaceComponent
