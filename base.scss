@@ -33,6 +33,9 @@ $small-secondary-heading-size: clamp(1.125rem, 2.25vw, 1.75rem);
 $big-main-heading-size: clamp(4.35rem, 9.5vw, 9rem);
 $big-secondary-heading-size: clamp(1.5rem, 2.5vw, 2rem);
 
+// IMAGE URLs-------------------------
+$apod-image-url: var(--apod-image-url);
+
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;

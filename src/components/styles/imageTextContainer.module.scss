@@ -1,0 +1,45 @@
+@import '../../../base.scss';
+
+.apodContainer {
+  @include flex(column, space-evenly, center);
+  background: $gradient;
+  padding: 2rem clamp(2.5rem, 5vw, 4.5rem);
+  gap: 2rem;
+  border-end-start-radius: 1.5rem;
+  border-end-end-radius: 1.5rem;
+
+  .picture {
+    @include flex(row, center, center);
+    color: #ebeaea;
+    width: clamp(26.25rem, 52.5vw, 52rem);
+    height: 30rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+  }
+
+  .textContent {
+    @include flex(column, center, center);
+    color: #ebeaea;
+    width: 100%;
+    padding: 1rem;
+    background-color: $light-grey-assent;
+    border-radius: 1rem;
+    min-height: 17rem;
+    margin-bottom: 1rem;
+
+    h1 {
+      margin-bottom: 1rem;
+      text-align: left;
+      font-family: $heading-font;
+      text-transform: capitalize;
+      font-size: 2.5rem;
+    }
+    p {
+      font-family: $heading-font;
+      font-size: 1.15rem;
+      overflow-y: scroll;
+      max-height: 20rem;
+    }
+  }
+}

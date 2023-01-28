@@ -23,8 +23,14 @@ export const HomiBhabha = {
   name: "Homi Jehangir Bhabha",
   quote:
     "I do have this one purpose — increasing the intensity of my consciousness of life.",
-  paraOne: "Homi Jehangir Bhabha, FRS (30 October 1909 – 24 January 1966) was an Indian nuclear physicist, founding director, and professor of physics at the Tata Institute of Fundamental Research (TIFR). Colloquially known as Father of Indian nuclear programme",
-  paraTwo: "Homi Jehangir Bhabha was born into a prominent wealthy Parsi family, through which he was related to businessmen Dinshaw Maneckji Petit.[6] He was born on 30 October 1909. His father was Jehangir Hormusji Bhabha, a well known Parsi lawyer and his mother was Meheren",
-  paraThree: "Bhabha's father understood his son's predicament, and he along with his wife agreed to finance his studies in mathematics provided that he obtain first class on his Mechanical Sciences Tripos exam. Bhabha sat the Tripos exam in June 1930 and passed with first class honours.",
-  paraFour: "In January 1933, Bhabha received his doctorate in nuclear physics after publishing his first scientific paper, The Absorption of Cosmic radiation. In the paper, Bhabha offered an explanation of the absorption features and electron shower production in cosmic rays. ",
+  paraOne:
+    "Homi Jehangir Bhabha, FRS (30 October 1909 – 24 January 1966) was an Indian nuclear physicist, founding director, and professor of physics at the Tata Institute of Fundamental Research (TIFR). Colloquially known as Father of Indian nuclear programme",
+  paraTwo:
+    "Homi Jehangir Bhabha was born into a prominent wealthy Parsi family, through which he was related to businessmen Dinshaw Maneckji Petit.[6] He was born on 30 October 1909. His father was Jehangir Hormusji Bhabha, a well known Parsi lawyer and his mother was Meheren",
+  paraThree:
+    "Bhabha's father understood his son's predicament, and he along with his wife agreed to finance his studies in mathematics provided that he obtain first class on his Mechanical Sciences Tripos exam. Bhabha sat the Tripos exam in June 1930 and passed with first class honours.",
+  paraFour:
+    "In January 1933, Bhabha received his doctorate in nuclear physics after publishing his first scientific paper, The Absorption of Cosmic radiation. In the paper, Bhabha offered an explanation of the absorption features and electron shower production in cosmic rays. ",
 };
+
+export let today = new Date().toLocaleString("en-ca").slice(0, 10);

@@ -23,6 +23,7 @@ const Curosity = () => {
         feature="CUROSITY"
         path="/curosity"
       />
+
     </Fragment>
   );
 };

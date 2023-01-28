@@ -2,8 +2,42 @@ import React, { Fragment } from "react";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { cube } from "../assets/Links";
+import { useState } from "react";
+import { today } from "../assets/data";
+import classes from "./styles/kpod.module.scss";
+import ImageTextContainer from "../components/ImageTextContainer";
+import { useEffect } from "react";
+import useHttps from "../hooks/useHttps";
 
 const KPOD = () => {
+  const [date, setDate] = useState("");
+  const [kpodData, setKPOData] = useState('')
+  const [kpodStyles, setKpodStyles] = useState({
+    background:
+      "url(https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT) center/cover",
+  });
+  const { requstLoading, sendRequest } = useHttps();
+
+  const { explanation, title} = kpodData;
+
+  const dateChangeHandeler = (event) => {
+    setDate(event.target.value);
+  };
+  console.log(date);
+
+  useEffect(() => {
+    const config = {
+      url: `https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT&date=${date}`,
+    };
+
+    const useKPOData = (data) => {
+      setKpodStyles({ background: `url(${data.url}) center/cover` });
+      setKPOData(data)
+    };
+
+    sendRequest(config, useKPOData);
+  }, [sendRequest, date]);
+
   return (
     <Fragment>
       <FaceComponent
@@ -22,8 +56,26 @@ const KPOD = () => {
         feature="K-POD"
         path="/k-pod"
       />
+
+      <ImageTextContainer
+        customStyles={kpodStyles}
+        title={title}
+        explanation={explanation}
+        ifLoading={requstLoading}
+      >
+        <input
+          type="date"
+          min="1996-01-01"
+          max={today}
+          defaultValue={today}
+          onChange={dateChangeHandeler}
+          className={classes.datePicker}
+        />
+      </ImageTextContainer>
     </Fragment>
   );
 };
 
 export default KPOD;
+
+// `https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT&date=2023-01-30`

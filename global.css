@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap");
 
+:root{
+  --apod-image-url: '';
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +22,3 @@ body {
 *:focus {
   outline: none;
 }
-
-
-

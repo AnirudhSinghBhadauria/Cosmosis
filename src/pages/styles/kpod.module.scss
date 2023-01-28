@@ -1,0 +1,13 @@
+@import '../../../base.scss';
+.datePicker{
+     border: none;
+     font-size: 1.5rem;
+     color: white;
+     background: transparent;
+     font-family: $fat-font;
+}
+
+
+input[type="date" i]::-webkit-calendar-picker-indicator{
+     background-image: url('https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-cube-100.png?alt=media&token=dc3d6c13-6ed3-46a8-8a7b-56a5d9a0d7cf');
+}

@@ -1,17 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { threeCircle } from "../assets/Links";
 import classes from "./styles/apod.module.scss";
 import useHttps from "../hooks/useHttps";
+import ImageTextContainer from "../components/ImageTextContainer";
 
 const APOD = () => {
-  const { requestError, requstLoading, sendRequest } = useHttps(
-    config,
-    getDataFromUseHttps
-  );
+  const { sendRequest, requstLoading } = useHttps();
+  const [data, setData] = useState({});
+  const { url, title, explanation, copyright } = data;
 
-  const config = { url: "" };
+  useEffect(() => {
+    const config = {
+      url: "https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT",
+    };
+
+    const nasaData = (data) => setData(data);
+
+    sendRequest(config, nasaData);
+  }, [sendRequest]);
+
+  const apodStyles = { background: `url(${url}) center/cover` };
 
   return (
     <Fragment>
@@ -34,6 +44,14 @@ const APOD = () => {
         feature="APOD"
         path="/apod"
       />
+
+      <ImageTextContainer
+        customStyles={apodStyles}
+        title={title}
+        explanation={explanation}
+        ifLoading = {requstLoading}
+      >
+      </ImageTextContainer>
     </Fragment>
   );
 };
