@@ -69,7 +69,6 @@
         font-size: 2rem;
       }
       p {
-
         font-family: $heading-font;
         font-weight: 600;
         font-size: 1.25rem;
@@ -90,6 +89,8 @@
   background: $gradient;
   color: white;
   height: 95vh;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 
   div {
     width: 100%;
@@ -145,6 +146,8 @@
   background: $gradient;
   color: white;
   padding-block: 5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 
   img {
     width: 400px;

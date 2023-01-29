@@ -7,7 +7,7 @@ const ImageTextContainer = (props) => {
       <div style={props.customStyles} className={classes.picture}>
         {props.ifLoading ? "...loading" : props.children}
       </div>
-      <div className={classes.textContent}>
+      <div className={`${classes.textContent} ${props.className}`}>
         {props.ifLoading ? (
           "...loading"
         ) : (

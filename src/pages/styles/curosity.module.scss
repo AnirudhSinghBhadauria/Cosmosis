@@ -1,6 +1,35 @@
-.redPlanet{
-     width: 350px;
-     height: 350px;
-     background-color: #e04642;
-     border-radius: 100%;
+@import "../../../base.scss";
+
+.redPlanet {
+  width: 350px;
+  height: 350px;
+  background-color: #e04642;
+  border-radius: 100%;
+}
+
+.datePicker {
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  font-family: $heading-font;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-weight: 600;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey-assent;
+}
+
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/icons8-calendar-64.png?alt=media&token=d69b3ac8-8214-4e3a-b039-f8f4d1aca241");
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.borderRadius{
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }

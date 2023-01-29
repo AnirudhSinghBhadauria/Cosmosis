@@ -10,20 +10,16 @@ import { useEffect } from "react";
 import useHttps from "../hooks/useHttps";
 
 const KPOD = () => {
-  const [date, setDate] = useState("");
-  const [kpodData, setKPOData] = useState('')
-  const [kpodStyles, setKpodStyles] = useState({
-    background:
-      "url(https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT) center/cover",
-  });
+  const [date, setDate] = useState("2023-01-11");
+  const [kpodData, setKPOData] = useState("");
+  const [kpodStyles, setKpodStyles] = useState();
   const { requstLoading, sendRequest } = useHttps();
 
-  const { explanation, title} = kpodData;
+  const { explanation, title } = kpodData;
 
   const dateChangeHandeler = (event) => {
     setDate(event.target.value);
   };
-  console.log(date);
 
   useEffect(() => {
     const config = {
@@ -32,7 +28,7 @@ const KPOD = () => {
 
     const useKPOData = (data) => {
       setKpodStyles({ background: `url(${data.url}) center/cover` });
-      setKPOData(data)
+      setKPOData(data);
     };
 
     sendRequest(config, useKPOData);
@@ -45,6 +41,7 @@ const KPOD = () => {
         heading="SHORES OF THE COSMIC OCEAN"
         quote="The known is finite, the unknown is infinite, intelectually we stand on a islet in the midst of an imitable ocean of inexcellebility. Our busniess in every genration is to reclaim a little more land."
         author="- T.H. HUXLEY"
+        className={classes.borderRadius}
       >
         <img alt="cube" src={cube} />
       </FaceComponent>
@@ -67,7 +64,7 @@ const KPOD = () => {
           type="date"
           min="1996-01-01"
           max={today}
-          defaultValue={today}
+          value={date}
           onChange={dateChangeHandeler}
           className={classes.datePicker}
         />

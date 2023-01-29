@@ -101,6 +101,7 @@ const Dashboard = () => {
         heading="HEAVEN AND HELL"
         quote="I am Death, dystroyer of Worlds."
         author="- LORD KRISHNA"
+        className={classes.borderRadius}
       >
         <img src={heavenAndHell} alt="heaven and hell" />
       </FaceComponent>

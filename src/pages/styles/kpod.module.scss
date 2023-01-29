@@ -1,13 +1,27 @@
-@import '../../../base.scss';
-.datePicker{
-     border: none;
-     font-size: 1.5rem;
-     color: white;
-     background: transparent;
-     font-family: $fat-font;
+@import "../../../base.scss";
+.datePicker {
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  font-family: $heading-font;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-weight: 600;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey-assent;
 }
 
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/icons8-calendar-64.png?alt=media&token=d69b3ac8-8214-4e3a-b039-f8f4d1aca241");
+  width: 19px;
+  height: 19px;
+  cursor : pointer;
+}
 
-input[type="date" i]::-webkit-calendar-picker-indicator{
-     background-image: url('https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-cube-100.png?alt=media&token=dc3d6c13-6ed3-46a8-8a7b-56a5d9a0d7cf');
+.borderRadius{
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }

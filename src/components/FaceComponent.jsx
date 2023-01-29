@@ -3,7 +3,7 @@ import classes from "./styles/faceComponent.module.scss";
 
 const FaceComponent = (props) => {
   return (
-    <section className={`${props.className} ${classes.faceContainer}`}>
+    <section className={`${classes.faceContainer} ${props.className}`}>
       <section>
         <p>{props.number}</p>
         <h1>{props.heading}</h1>

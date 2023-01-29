@@ -33,4 +33,7 @@ export const HomiBhabha = {
     "In January 1933, Bhabha received his doctorate in nuclear physics after publishing his first scientific paper, The Absorption of Cosmic radiation. In the paper, Bhabha offered an explanation of the absorption features and electron shower production in cosmic rays. ",
 };
 
+export const explanation =
+"Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASAs Mars Science Laboratory (MSL) mission. Curiosity was launched from Cape Canaveral (CCAFS) on November 26, 2011, at 15:02:00 UTC and landed on Aeolis Palus inside Gale crater on Mars on August 6, 2012, 05:17:57 UTC. The Bradbury Landing site was less than 2.4 km (1.5 mi) from the center of the touchdown target after a 560 million km (350 million mi) journey.In December 2012, Curiosity's two-year mission was extended indefinitely,[10] and on August 5, 2017, NASA celebrated the fifth anniversary of the Curiosity rover landing."
+
 export let today = new Date().toLocaleString("en-ca").slice(0, 10);
