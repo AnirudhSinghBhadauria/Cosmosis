@@ -61,3 +61,45 @@
     }
   }
 }
+
+@media (max-width: $TABLET) {
+  .faceContainer {
+    height: 100vh;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    justify-content: space-evenly;
+
+    section:nth-of-type(1) {
+      h1 {
+        width: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $SCREENS) {
+  .faceContainer {
+    height: 100%;
+    padding: 2rem;
+    justify-content: flex-start;
+
+    section:nth-of-type(1) {
+      h1 {
+        width: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .faceContainer {
+  gap: 3.25rem;
+    padding: 1.25rem;
+    justify-content: space-evenly;
+
+    section:nth-of-type(1) {
+      h1 {
+        width: 5rem;
+      }
+    }
+  }
+}

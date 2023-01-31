@@ -28,15 +28,13 @@ const Curosity = () => {
     sendRequest(config, useCurosityData);
   }, [sendRequest, date]);
 
-;
-
   return (
     <Fragment>
       <FaceComponent
         number="C.XI S.XXI"
         heading="BLUES FOR A RED PLANET"
-        quote="In the Archads of the gods, he watches the canals. . ."
-        author="- EMUNA ELISH"
+        quote="The first human beings to land on Mars should not come back to Earth. They should be the beginning of a build-up of a colony/settlement, I call it a ‘permanence’."
+        author="- Buzz Aldrin"
         className={classes.borderRadius}
       >
         <div className={classes.redPlanet}></div>

@@ -17,3 +17,32 @@
     overflow-y: scroll;
   }
 }
+
+// -------------MEDIA---------------
+
+@media (max-width: $TABLET){
+  .wrapper{
+    main{
+      padding: 0rem;
+    }
+  }
+}
+
+@media(max-width: $SCREENS){
+  .wrapper{
+    main{
+      padding: clamp(1.25rem,2.5vw,2rem);
+    }
+    .container{
+      width:100%;
+    }
+  }
+}
+
+@media(max-width: $MOBILE){
+  .wrapper{
+    main{
+      padding: 0rem;
+    }
+  }
+}

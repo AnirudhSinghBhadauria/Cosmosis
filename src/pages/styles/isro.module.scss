@@ -99,9 +99,9 @@
 
     h1 {
       font-family: $heading-font;
-      font-size: clamp(1.75rem,3.5vw,3rem);
+      font-size: clamp(1.75rem, 3.5vw, 3rem);
       max-width: 15rem;
-      line-height: clamp(1.75rem,3.5vw,3rem);
+      line-height: clamp(1.75rem, 3.5vw, 3rem);
     }
     p {
       font-family: $heading-font;
@@ -131,12 +131,13 @@
   @include flex(row, space-evenly, center);
   background: $gradient;
   color: white;
-  padding-block: 5rem;
+  padding-block: clamp(2.25rem, 5.5vw, 5rem);
 
   img {
-    width: clamp(17.875rem,35.75vw,35.25rem);
-    height: clamp(12.75rem,25.5vw,25rem);
+    width: clamp(17.875rem, 35.75vw, 35.25rem);
+    height: clamp(12.75rem, 25.5vw, 25rem);
     opacity: 1;
+    border-radius: 1.15rem;
   }
   p {
     max-width: 20rem;
@@ -147,7 +148,7 @@
   @include flex(row, space-evenly, center);
   background: $gradient;
   color: white;
-  padding-block: 5rem;
+  padding-block: clamp(2.25rem, 5.5vw, 5rem);
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 
@@ -155,6 +156,7 @@
     width: 400px;
     height: 548px;
     opacity: 1;
+    border-radius: 1.5rem;
   }
   p {
     max-width: 20rem;
@@ -192,8 +194,8 @@
   }
 
   .earthSection {
-    div{
-      h1{
+    div {
+      h1 {
         max-width: 10rem;
       }
     }
@@ -203,7 +205,111 @@
     }
   }
 
-  .firstPhotoSection{
+  .firstPhotoSection {
+    @include flex(column-reverse, center, flex-start);
+    padding: 1rem;
+    gap: 1rem;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+    p {
+      background-color: $light-grey-assent;
+      max-width: 100%;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .secondPhotoSection {
     @include flex(column, center, flex-start);
+    padding: 1rem;
+    gap: 1rem;
+
+    p {
+      background-color: $light-grey-assent;
+      border-radius: 1rem;
+      padding: 1rem;
+      max-width: 100%;
+    }
+
+    img {
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .main {
+    justify-content: space-evenly;
+    height: 100vh;
+    padding: 0.5rem;
+
+    .container {
+      .textContainer {
+        padding: 0rem;
+      }
+    }
+
+    aside {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .earthSection {
+    div {
+      h1 {
+        max-width: 5rem;
+      }
+    }
+  }
+
+  .secondPhotoSection {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $SCREENS) {
+  .main {
+    justify-content: center;
+    align-items: center;
+    .container {
+      .textContainer {
+        p {
+          line-height: 8rem;
+          font-size: 10rem;
+        }
+      }
+    }
+    aside {
+      padding: 1rem;
+      padding-top: 3rem;
+    }
+  }
+
+  .earthSection {
+    img {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .main {
+    justify-content: space-evenly;
+    .container {
+      .textContainer {
+        p {
+          line-height: 7rem;
+          font-size: 9rem;
+        }
+      }
+    }
   }
 }

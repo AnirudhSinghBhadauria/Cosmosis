@@ -118,10 +118,7 @@
   border-bottom-right-radius: 1.5rem;
 }
 
-
-
 // ------------------------MEDIA---------------------
-
 
 @media (max-width: $LAPTOP) {
   .forefrount {
@@ -138,12 +135,37 @@
   }
 }
 
-// @media (max-width: 960px) {
-//   .forefrount {
-//     .headingSection {
-//       h1 {
-//         font-size: 1rem;
-//       }
-//     }
-//   }
-// }
+@media (max-width: $TABLET) {
+  .forefrount {
+    height: 100vh;
+    .imageWrapper {
+      .singleDotContainer {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $SCREENS) {
+  .forefrount {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .sectionTwo{
+    padding: 1rem clamp(3rem, 6vw, 5.5rem);
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .forefrount {
+    padding: 1rem;
+    align-items: center;
+   
+    .headingSection{
+      padding: 0rem;
+    }
+  }
+  .sectionTwo{
+    padding: 1rem 2rem;
+  }
+}

@@ -9,9 +9,6 @@
   width: clamp(30rem, 30.5vw ,30rem) ;
   overflow-y: scroll;
   min-width: 15rem;
-  // position: absolute;
-  // right:-40rem;
-  // right: 0;
 
 
   h1,
@@ -113,4 +110,29 @@ img {
     gap: 0.75rem;
     display: flex;
   }
+}
+
+// -----------------MEDIA-----------------
+
+@media (max-width: $TABLET){
+  .rightSideWrapper{
+    padding: 0.75rem;
+  }
+  
+  .baseClass{
+    padding: 0.5rem;
+
+    svg{
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@media(max-width: $SCREENS){
+ .rightSideWrapper{
+  position: absolute;
+  right:-40rem;
+  transition: right 400ms ease;
+ }
 }

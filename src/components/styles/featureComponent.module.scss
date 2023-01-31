@@ -83,3 +83,29 @@
     }
   }
 }
+
+@media (max-width: $TABLET){
+  .feature{
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: $SCREENS){
+  .feature{
+   padding: 3rem 2.25rem; 
+
+   div:nth-of-type(1){
+    padding: 1.25rem;
+   }
+  }
+}
+
+@media (max-width: $MOBILE){
+  .feature{
+   padding: 3rem 1rem; 
+
+   div:nth-of-type(1){
+    padding: 1.25rem;
+   }
+  }
+}
