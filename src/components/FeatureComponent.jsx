@@ -16,14 +16,14 @@ const FeatureComponent = (props) => {
           viewBox="0 0 135 13"
           fill="none"
         >
-          <line y1="7" x2="133.015" y2="7" stroke="white" stroke-width="2" />
+          <line y1="7" x2="133.015" y2="7" stroke="white" strokeWidth="2" />
           <line
             x1="127.06"
             y1="1.93867"
             x2="133.068"
             y2="7.93867"
             stroke="white"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <line
             x1="126.94"
@@ -31,7 +31,7 @@ const FeatureComponent = (props) => {
             x2="132.948"
             y2="5.93868"
             stroke="white"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </svg>
       </Link>

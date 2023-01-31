@@ -64,3 +64,22 @@
     }
   }
 }
+
+// -------------------MEDIA----------------------
+
+@media (max-width: $LAPTOP) {
+  .feature {
+    padding: 2rem 1.5rem;
+
+    div:nth-of-type(1) {
+      padding: 1rem;
+
+      .link {
+        svg {
+          width: 100px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}

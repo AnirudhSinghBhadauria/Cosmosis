@@ -3,7 +3,7 @@
 .apodContainer {
   @include flex(column, space-evenly, center);
   background: $gradient;
-  padding: 2rem clamp(2.5rem, 5vw, 4.5rem);
+  padding: 2rem clamp(1.5rem, 3vw, 4.5rem);
   gap: 2rem;
   border-end-start-radius: 1.5rem;
   border-end-end-radius: 1.5rem;
@@ -11,9 +11,8 @@
   .picture {
     @include flex(row, center, center);
     color: #ebeaea;
-    width: clamp(26.25rem, 52.5vw, 52rem);
+    width: 100%;
     height: 30rem;
-    padding: 2rem;
     border-radius: 1rem;
     position: relative;
   }

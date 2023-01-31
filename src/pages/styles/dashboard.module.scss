@@ -1,6 +1,7 @@
 @import "../../../base.scss";
 
 .forefrount {
+  @include flex(column, space-evenly, flex-start);
   background: $dark-grey-assent;
   background: $gradient;
   border-radius: $border-radius;
@@ -10,7 +11,7 @@
 
   .headingSection {
     @include flex(column, center, flex-start);
-    padding: 3rem;
+    padding: clamp(1.75rem, 3.5vw, 3rem);
     padding-bottom: 0;
     color: white;
 
@@ -21,21 +22,23 @@
     }
     h1 {
       font-family: $heading-font;
-      font-size: $big-main-heading-size;
+      font-size: clamp(4.35rem, 9.5vw, 9rem);
     }
   }
 
   .dotContainer {
     @include flex(row, space-between, center);
-    padding: 0rem 5rem;
+    padding: 0rem clamp(3.25rem, 6.5vw, 6rem);
     color: white;
     font-size: 1.15rem;
     font-family: $heading-font;
+    width: 100%;
   }
 
   .imageWrapper {
     @include flex(row, center, center);
-    padding: 2rem 5rem;
+    width: 100%;
+    padding: 2rem clamp(3.25rem, 6.5vw, 6rem);
 
     .singleDotContainer {
       flex: 1;
@@ -68,7 +71,7 @@
 
 .sectionTwo {
   @include flex(row, space-between, center);
-  padding: 1rem 6rem 1rem 4rem;
+  padding: 1rem clamp(2.25rem, 5.5vw, 5rem);
   background: $gradient;
 
   .textContainer {
@@ -78,16 +81,16 @@
 
     section:nth-of-type(1) {
       flex: 3;
+      h1 {
+        font-family: $heading-font;
+        font-size: clamp(3.5rem, 7vw, 6.5rem);
+        line-height: clamp(3.25rem, 6.5vw, 6rem);
+      }
       p {
-        font-size: $small-secondary-heading-size;
+        font-size: clamp(1.125rem, 2.25vw, 1.75rem);
         font-family: $thin-font;
         font-weight: 300;
         margin-bottom: 1rem;
-      }
-      h1 {
-        font-family: $heading-font;
-        font-size: $small-main-heading-size;
-        line-height: 6rem;
       }
     }
 
@@ -105,12 +108,42 @@
   }
 
   svg {
-    width: 100px;
-    height: 921px;
+    width: clamp(3.35rem, 6.75vw, 6.25rem);
+    height: clamp(29rem, 58vw, 57.5rem);
   }
 }
 
-.borderRadius{
+.borderRadius {
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
+
+
+
+// ------------------------MEDIA---------------------
+
+
+@media (max-width: $LAPTOP) {
+  .forefrount {
+    .headingSection {
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+      h1 {
+        font-size: clamp(4.25rem, 8.5vw, 8rem);
+      }
+    }
+  }
+
+  .sectionTwo {
+    padding: 1rem clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+// @media (max-width: 960px) {
+//   .forefrount {
+//     .headingSection {
+//       h1 {
+//         font-size: 1rem;
+//       }
+//     }
+//   }
+// }

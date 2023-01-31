@@ -4,20 +4,20 @@
   @include flex(row, space-between, flex-start);
   color: white;
   background: $gradient;
-  padding: 5rem 1rem 3rem 1rem;
+  padding: clamp(2.25rem, 5.5vw, 5rem) 1rem clamp(1.75rem, 3.5vw, 3rem) 1rem;
   transition: box-shadow 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   img {
-    width: 40rem;
-    height: 40rem;
+    width: clamp(20.25rem, 40.5vw, 40rem);
+    height: clamp(20.25rem, 40.5vw, 40rem);
     opacity: 1;
     border-end-end-radius: 50%;
     border-top-left-radius: 40%;
     box-shadow: inset 0 0 0 4rem #1f1f1f;
     transition: box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    &:hover{
-     box-shadow: inset 0 0 4rem 5rem #1f1f1f;
+    &:hover {
+      box-shadow: inset 0 0 4rem 5rem #1f1f1f;
     }
   }
   div {
@@ -53,6 +53,31 @@
     p {
       font-family: $heading-font;
       max-width: 15rem;
+    }
+  }
+}
+
+// -----------------MEDIA-------------------
+
+@media (max-width: $LAPTOP) {
+  .scientistContainer {
+    div {
+      p {
+        display: none;
+      }
+    }
+  }
+  .about {
+    max-width: 100%;
+    align-items: flex-start;
+
+    div:nth-of-type(2) {
+      @include flex(column, center, flex-start);
+      background-color: $light-grey-assent;
+      border-radius: 1.15rem;
+      p {
+        max-width: 100%;
+      }
     }
   }
 }

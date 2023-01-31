@@ -1,8 +1,8 @@
 @import "../../../base.scss";
 
 .redPlanet {
-  width: 350px;
-  height: 350px;
+  width: clamp(11.1875rem ,22.375vw ,21.875rem);
+  height:clamp(11.1875rem ,22.375vw ,21.875rem);
   background-color: #e04642;
   border-radius: 100%;
 }

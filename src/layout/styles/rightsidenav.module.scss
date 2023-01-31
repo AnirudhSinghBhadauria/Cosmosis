@@ -6,7 +6,12 @@
   border-radius: 2rem 0rem 0rem 2rem;
   padding: 1.5rem;
   height: 100vh;
-  width: 30rem;
+  width: clamp(30rem, 30.5vw ,30rem) ;
+  overflow-y: scroll;
+  min-width: 15rem;
+  // position: absolute;
+  // right:-40rem;
+  // right: 0;
 
 
   h1,
@@ -33,6 +38,7 @@ img {
   transition: all 200ms ease-in-out;
   border-radius: 1rem;
   padding: 1rem;
+  min-width: 20rem;
 
   section:nth-of-type(1) {
     flex: 1;
