@@ -9,17 +9,33 @@ import CardContent from "../components/CardContent";
 import Button from "../components/Button";
 import { useState } from "react";
 import { profilePlaceHolderImage } from "../assets/Links";
-
+import { useContext } from "react";
+import { authContext } from "../store/AuthContextProvider";
 
 const RightSideNav = () => {
-  const [profilePicture, setProfilePicture] = useState(profilePlaceHolderImage);
- 
+  const { ifSideBarOpen, changeSideBarState } = useContext(authContext);
+
+  let className;
+  if (ifSideBarOpen === true) {
+    className = `${classes.sideBarOpen}`;
+  } else {
+    className = `${classes.sideBarClose}`;
+  }
+
+  const sideBarCloser = () => changeSideBarState(false);
 
   return (
-    <div className={classes.rightSideWrapper}>
+    <div className={`${classes.rightSideWrapper} ${className}`}>
       <aside className={classes.cardContainer}>
+        <h1 className={classes.sideHeading}>
+          <Link to="/" preventScrollReset={true} onClick={sideBarCloser}>
+            COSMOSIS{" "}
+          </Link>
+        </h1>
+
         <NavLink
           to="/apod"
+          onClick={sideBarCloser}
           preventScrollReset={false}
           className={({ isActive }) =>
             isActive
@@ -44,6 +60,7 @@ const RightSideNav = () => {
         <NavLink
           to="/k-pod"
           preventScrollReset={false}
+          onClick={sideBarCloser}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -67,6 +84,7 @@ const RightSideNav = () => {
         <NavLink
           to="/isro"
           preventScrollReset={false}
+          onClick={sideBarCloser}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -90,6 +108,7 @@ const RightSideNav = () => {
         <NavLink
           to="/curosity"
           preventScrollReset={false}
+          onClick={sideBarCloser}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -113,11 +132,11 @@ const RightSideNav = () => {
 
       <aside className={classes.bottomContainer}>
         <section>
-          <Link to='/' preventScrollReset={false}>
+          <Link to="/" onClick={sideBarCloser} preventScrollReset={false}>
             <LogoSVG />
           </Link>
           <div className={classes.profileContainer}>
-            <img className={classes.profile} src={profilePicture} />
+            <img className={classes.profile} src={profilePlaceHolderImage} />
             <div className={classes.green}></div>
           </div>
         </section>

@@ -9,10 +9,15 @@
   width: clamp(30rem, 30.5vw, 30rem);
   overflow-y: scroll;
   min-width: 15rem;
+  transition: all 600ms ease;
 
   h1,
   p {
     font-family: $heading-font;
+  }
+
+  .sideHeading {
+    display: none;
   }
 
   .cardContainer {
@@ -112,7 +117,7 @@ img {
     svg {
       width: 2.8rem;
       height: 2.8rem;
-      background-color: #F0EFEB;
+      background-color: #f0efeb;
       border-radius: 50%;
       padding: 0.2rem;
       path {
@@ -132,7 +137,6 @@ img {
 @media (max-width: $TABLET) {
   .rightSideWrapper {
     padding: 0.75rem;
-    transition: right 400ms ease;
   }
 
   .baseClass {
@@ -148,21 +152,40 @@ img {
 @media (max-width: $SCREENS) {
   .rightSideWrapper {
     position: absolute;
-    right: -40rem;
-    max-width: 25em;
-    padding: 1.5rem;
+    max-width: 30em;
+    padding: 1rem;
 
-    transition: right 400ms ease;
+    .sideHeading {
+      display: block;
+      align-self: flex-start;
+      padding: 1rem;
+      width: 100%;
+      background-color: white;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
 @media (max-width: $MOBILE) {
   .rightSideWrapper {
     position: absolute;
-    right: -0rem;
     max-width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
 
-    transition: right 400ms ease;
+    .sideHeading {
+      padding: 0.1rem;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+    }
   }
+}
+
+// -----------------USER-CLASSES---------------
+
+.sideBarOpen {
+  right: 0rem;
+}
+.sideBarClose {
+  right: -40rem;
 }

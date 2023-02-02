@@ -9,7 +9,7 @@ import ImageTextContainer from "../components/ImageTextContainer";
 const APOD = () => {
   const { sendRequest, requstLoading } = useHttps();
   const [data, setData] = useState({});
-  const { url, title, explanation, copyright } = data;
+  const { url, title, explanation } = data;
 
   useEffect(() => {
     const config = {

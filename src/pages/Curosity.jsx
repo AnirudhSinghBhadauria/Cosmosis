@@ -9,7 +9,7 @@ import { explanation } from "../assets/data";
 
 const Curosity = () => {
   const [date, setDate] = useState("2023-01-19");
-  const { sendRequest } = useHttps();
+  const { sendRequest, requstLoading } = useHttps();
   const [curosityStyles, setCurosityStyles] = useState({});
 
   const dateChangeHandeler = (event) => setDate(event.target.value);
@@ -55,6 +55,7 @@ const Curosity = () => {
         title="Curosity"
         explanation={explanation}
         className={classes.displayNone}
+        ifLoading={requstLoading}
       >
         <input
           type="date"

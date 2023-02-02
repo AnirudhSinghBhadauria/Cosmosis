@@ -23,3 +23,11 @@ body {
 *:focus {
   outline: none;
 }
+
+
+.sideBar-Open{
+  background-color: red;
+}
+.sideBar-Close{
+  background-color: white;
+}

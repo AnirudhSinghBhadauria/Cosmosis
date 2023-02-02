@@ -1,8 +1,9 @@
 import React from 'react'
+import Loader from '../components/Loader'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <Loader />
   )
 }
 

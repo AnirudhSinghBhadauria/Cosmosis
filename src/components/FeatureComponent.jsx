@@ -7,7 +7,7 @@ const FeatureComponent = (props) => {
 
   if (props.ifLink === "true") {
     link = (
-      <Link className={classes.link} to={props.path}>
+      <Link className={classes.link} to={props.path} preventScrollReset={false}>
         TAKE ME TO THAT
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const FeatureComponent = (props) => {
         <p>{props.paraTwo}</p>
         {props.paraThree && <p>{props.paraThree}</p>}
 
-       {link}
+        {link}
       </div>
       <div>
         <h1>{props.feature}</h1>

@@ -12,20 +12,25 @@
     overflow-y: scroll;
 
     .sidebarOpener{
+      display: none;
       position: absolute;
-      top: 1rem;
-      right: 1rem;
-      // border:4px $light-yellow solid;
-      background-color: $light-yellow;
       border-radius: 50%;
       width: 30px;
       height: 30px;
       z-index: 999;
+      transition: border 600ms ease;
+    }
+    .sideBarOpen{
+     border-right: 30px solid black;
+     background-color: hotpink;
+    }
+    .sideBarClose{
+      border-left: 30px solid hotpink;
+      background-color: black;
     }
   }
   main {
     overflow-x: hidden;
-
     padding: 1rem;
     width: 100%;
     overflow-y: scroll;
@@ -50,6 +55,11 @@
     }
     .container{
       width:100%;
+      .sidebarOpener{
+        display: block;
+        top: 2rem;
+        right: 2rem;
+      }
     }
   }
 }
@@ -59,5 +69,13 @@
     main{
       padding: 0rem;
     }
+    .container{
+      .sidebarOpener{
+        top: 1.15rem;
+        right: 1.15rem;
+      }
+    }
   }
 }
+
+
