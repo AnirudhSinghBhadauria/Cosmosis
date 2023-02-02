@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  max-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar {
   width: 0px;
 }

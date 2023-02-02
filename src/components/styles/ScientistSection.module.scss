@@ -22,10 +22,12 @@
   }
   div {
     p {
-      transform: translate(-10rem, 10rem);
       font-family: $heading-font;
       max-width: 15rem;
       font-size: 1.35rem;
+      text-align: right;
+      padding: 5rem 1rem 0rem 1rem;
+     
     }
   }
 }
@@ -87,6 +89,15 @@
     img{
       width: 25rem;
       height: 25rem;
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .scientistContainer{
+    img{
+      width: 100%;
+      height: auto;
     }
   }
 }

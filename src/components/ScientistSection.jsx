@@ -6,10 +6,10 @@ const ScientistSection = (props) => {
     <Fragment>
       <section className={classes.scientistContainer}>
         <div>
-          <img src={props.image} />
+          <img loading="eager" src={props.image} />
         </div>
         <div>
-          <p>{props.quote}</p>
+            <p>{props.quote}</p>
         </div>
       </section>
 

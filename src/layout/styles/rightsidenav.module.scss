@@ -6,10 +6,9 @@
   border-radius: 2rem 0rem 0rem 2rem;
   padding: 1.5rem;
   height: 100vh;
-  width: clamp(30rem, 30.5vw ,30rem) ;
+  width: clamp(30rem, 30.5vw, 30rem);
   overflow-y: scroll;
   min-width: 15rem;
-
 
   h1,
   p {
@@ -106,6 +105,22 @@ img {
     }
   }
 
+  section {
+    @include flex(row, space-evenly, center);
+    gap: 1rem;
+
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+      background-color: #F0EFEB;
+      border-radius: 50%;
+      padding: 0.2rem;
+      path {
+        fill: $light-grey-assent;
+      }
+    }
+  }
+
   .buttonContainer {
     gap: 0.75rem;
     display: flex;
@@ -114,25 +129,40 @@ img {
 
 // -----------------MEDIA-----------------
 
-@media (max-width: $TABLET){
-  .rightSideWrapper{
+@media (max-width: $TABLET) {
+  .rightSideWrapper {
     padding: 0.75rem;
+    transition: right 400ms ease;
   }
-  
-  .baseClass{
+
+  .baseClass {
     padding: 0.5rem;
 
-    svg{
+    svg {
       width: 50px;
       height: 50px;
     }
   }
 }
 
-@media(max-width: $SCREENS){
- .rightSideWrapper{
-  position: absolute;
-  right:-40rem;
-  transition: right 400ms ease;
- }
+@media (max-width: $SCREENS) {
+  .rightSideWrapper {
+    position: absolute;
+    right: -40rem;
+    max-width: 25em;
+    padding: 1.5rem;
+
+    transition: right 400ms ease;
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .rightSideWrapper {
+    position: absolute;
+    right: -0rem;
+    max-width: 100%;
+    padding: 1.5rem;
+
+    transition: right 400ms ease;
+  }
 }

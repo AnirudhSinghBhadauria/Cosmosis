@@ -10,8 +10,22 @@
     width: 65%;
     height: 99.9vh;
     overflow-y: scroll;
+
+    .sidebarOpener{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      // border:4px $light-yellow solid;
+      background-color: $light-yellow;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      z-index: 999;
+    }
   }
   main {
+    overflow-x: hidden;
+
     padding: 1rem;
     width: 100%;
     overflow-y: scroll;
@@ -24,6 +38,7 @@
   .wrapper{
     main{
       padding: 0rem;
+   
     }
   }
 }

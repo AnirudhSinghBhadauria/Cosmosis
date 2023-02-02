@@ -3,20 +3,24 @@ import ApodSVG from "../assets/SVG-Components/ApodSVG";
 import IsroSVG from "../assets/SVG-Components/IsroSVG";
 import CurositySVG from "../assets/SVG-Components/CurositySVG";
 import KnowYAPOD from "../assets/SVG-Components/KnowYAPOD";
-import { NavLink } from "react-router-dom";
+import LogoSVG from "../assets/SVG-Components/LogoSVG";
+import { Link, NavLink } from "react-router-dom";
 import CardContent from "../components/CardContent";
 import Button from "../components/Button";
 import { useState } from "react";
 import { profilePlaceHolderImage } from "../assets/Links";
 
+
 const RightSideNav = () => {
   const [profilePicture, setProfilePicture] = useState(profilePlaceHolderImage);
-  
+ 
+
   return (
     <div className={classes.rightSideWrapper}>
       <aside className={classes.cardContainer}>
         <NavLink
           to="/apod"
+          preventScrollReset={false}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -39,6 +43,7 @@ const RightSideNav = () => {
 
         <NavLink
           to="/k-pod"
+          preventScrollReset={false}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -61,6 +66,7 @@ const RightSideNav = () => {
 
         <NavLink
           to="/isro"
+          preventScrollReset={false}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -83,6 +89,7 @@ const RightSideNav = () => {
 
         <NavLink
           to="/curosity"
+          preventScrollReset={false}
           className={({ isActive }) =>
             isActive
               ? ` ${classes.isActive} ${classes.baseClass} `
@@ -105,10 +112,15 @@ const RightSideNav = () => {
       </aside>
 
       <aside className={classes.bottomContainer}>
-        <div className={classes.profileContainer}>
-          <img className={classes.profile} src={profilePicture} />
-          <div className={classes.green}></div>
-        </div>
+        <section>
+          <Link to='/' preventScrollReset={false}>
+            <LogoSVG />
+          </Link>
+          <div className={classes.profileContainer}>
+            <img className={classes.profile} src={profilePicture} />
+            <div className={classes.green}></div>
+          </div>
+        </section>
 
         <div className={classes.buttonContainer}>
           <Button>Log In</Button>

@@ -17,6 +17,8 @@ const ISRO = () => {
             <p>ISRO</p>
           </section>
           <img
+            fetchpriority="high"
+            loading="eager"
             src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c"
             alt="floating Astronaut"
           />

@@ -9,6 +9,7 @@ const Layout = (props) => {
       <div className={classes.wrapper}>
         <LeftSideNav />
         <div className={classes.container}>
+          <div className={classes.sidebarOpener}></div>
           <main>{props.children}</main>
           {/* <Footer /> */}
         </div>
