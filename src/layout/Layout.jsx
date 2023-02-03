@@ -31,7 +31,7 @@ const Layout = (props) => {
           className={`${classes.sidebarOpener} ${className}`}
         ></div>
         <main>{props.children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
       <RightSideNav />
     </div>

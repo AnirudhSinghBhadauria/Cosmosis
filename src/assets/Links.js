@@ -42,9 +42,11 @@ export const isroCycle1 =
 export const isroCycle2 =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ISRO%20Cycle2.webp?alt=media&token=bd459e19-4d05-4dac-8fc0-7b1b1094f157";
 
-// -------------------------Footer-video-----------------------------
-export const footerVideo =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/GLOCK%20LOOP%20FINAL%20CUT.mp4?alt=media&token=7b2284ad-704f-4c7d-8e31-49a0aa7e66e3";
+export const notFound = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/notFound.webp?alt=media&token=5b0adba1-a2e7-42d0-a981-ded2e9bdd07f'
+
+// -------------------------Footer-----------------------------
+export const footer =
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/70d3f5149642665.62eb5bc27e152.webp?alt=media&token=dc369536-77f0-4463-b408-e3f2160e57a7";
 
 // -------------------------RightSideNav-----------------------------
 export const linkImage =

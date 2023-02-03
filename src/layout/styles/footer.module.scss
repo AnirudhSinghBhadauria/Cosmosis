@@ -1,11 +1,76 @@
+@import "../../../base.scss";
+
 footer {
   padding: 1rem;
-  .video {
-    border-radius: 1.5rem;
-    width: 100%;
-    height: 90vh;
-    border: 1px solid black;
-    object-fit: cover;
-    object-position: center;
+
+  .footerContainer {
+    background-color: white;
+    border-radius: 1rem;
+    font-family: $heading-font;
+    overflow: hidden;
+    position: relative;
+    min-height: 20rem;
+
+    section {
+      @include flex(row, space-between, center);
+      width: 100%;
+      padding-right: 1rem;
+
+      .iconHolder {
+        @include flex(row, space-evenly, center);
+        gap: 0.75rem;
+        padding: 1rem;
+ 
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// ----------------MEDIA-----------------
+
+@media (max-width: $TABLET) {
+  footer {
+    .footerContainer {
+      h1 {
+        align-self: flex-start;
+      }
+      section {
+        @include flex(column, center, center);
+        padding-right: 0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $SCREENS) {
+  footer {
+    .footerContainer {
+      section {
+        @include flex(row, space-between, center);
+      }
+    }
+  }
+}
+
+@media (max-width: $MOBILE) {
+  footer {
+    .footerContainer {
+      section {
+        @include flex(column, center, center);
+      }
+    }
   }
 }

@@ -1,0 +1,48 @@
+@import "../.../../../../base.scss";
+
+.notFoundContainer {
+  @include flex(column, flex-start, center);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-family: $heading-font;
+  background-color: #074e34;
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  .notFound {
+    h1 {
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      font-family: $heading-font;
+    }
+    h2 {
+      font-size: 1rem;
+      width: 100%;
+    }
+    img {
+      height: auto;
+      width: 80%;
+      opacity: 1;
+    }
+    .linker {
+      @include flex(row, space-evenly, center);
+      gap: 0.75rem;
+      width: fit-content;
+    }
+
+    a {
+      padding: 0rem 0.5rem;
+      color: white;
+      border-bottom: 5px solid black;
+    }
+  }
+}
+
+// --------------MEDIA------------
+
+@media (max-width: $MOBILE) and (max-width: $TABLET) {
+  .notFoundContainer {
+   border-radius: 0rem;
+   border-bottom-left-radius: 2rem;
+   border-bottom-right-radius:2rem ;
+  }
+}

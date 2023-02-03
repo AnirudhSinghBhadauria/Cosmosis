@@ -55,15 +55,6 @@ const LeftSideNav = () => {
         >
           <IsroSVG />
         </NavLink>
-
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            isActive ? `${styles.active}` : `${styles.unActive}`
-          }
-        >
-         <ProfileSVG />
-        </NavLink>
     </nav>
   );
 };

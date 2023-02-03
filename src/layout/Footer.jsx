@@ -1,17 +1,46 @@
 import React from "react";
+import { footer } from "../assets/Links";
 import classes from "./styles/footer.module.scss";
-import { footerVideo } from '../assets/Links'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <video preload="none" className={classes.video} autoPlay muted loop>
-        <source
-          src={footerVideo}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <div className={classes.footerContainer}>
+        <section>
+          <h1>
+         
+            <Link to="/" preventScrollReset={false}>
+              COSMOSIS
+            </Link>
+          </h1>
+
+          <div className={classes.iconHolder}>
+            <a
+              href="https://github.com/AnirudhSinghBhadauria/Cosmosis"
+              name="github"
+              target="_blank"
+            >
+              <h2>GITHUB</h2>
+            </a>
+            <a
+              href="https://twitter.com/LieCheatSteal_"
+              name="twitter"
+              target="_blank"
+            >
+              <h2>TWITTER</h2>
+            </a>
+            <a
+              target="_blank"
+              name="contact"
+              href="https://mail.google.com/mail/u/0/?hl=en&tf=cm&fs=1&to=imanirudhbhadauria@proton.me"
+            >
+              <h2>CONTACT</h2>
+            </a>
+          </div>
+        </section>
+        <img src={footer} alt="Footer Image" />
+      </div>
     </footer>
   );
 };
