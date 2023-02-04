@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
           </div>
         </section>
-        <img src={footer} alt="Footer Image" />
+        <img src={footer} loading="eager" fetchpriority='high' alt="Footer Image" />
       </div>
     </footer>
   );

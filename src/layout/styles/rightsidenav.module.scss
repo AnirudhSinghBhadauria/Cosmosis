@@ -21,15 +21,12 @@
     font-size: 1.5rem;
     text-align: start;
     width: 100%;
-    background: radial-gradient(
-      circle at 10% 20%,
-      rgb(253, 239, 132) 0%,
-      rgb(247, 198, 169) 54.2%,
-      rgb(21, 186, 196) 100.3%
-    );
     border-radius: 0.75rem;
     color: black;
     padding: 0.5rem 0.75rem;
+    background-size: 300% !important;
+    background: $userGradient;
+    animation: name 10s infinite alternate;
   }
 
   .sideHeading {
@@ -223,4 +220,15 @@ img {
 }
 .sideBarClose {
   right: -40rem;
+}
+
+// ---------------KEYFRAMES-------------------
+
+@keyframes name {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }

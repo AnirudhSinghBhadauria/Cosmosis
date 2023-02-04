@@ -1,22 +1,22 @@
 // -------------------------Dashboard-Photo-Section-----------------------------
 export const image1 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-cube-100.png?alt=media&token=dc3d6c13-6ed3-46a8-8a7b-56a5d9a0d7cf";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F1.webp?alt=media&token=a6aaca27-9890-4d8f-9f08-acf90e7ad93e";
 export const image2 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-circles-100.png?alt=media&token=215141f1-f371-448b-8a17-23acb14881d6";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F2.webp?alt=media&token=da458601-e9af-494d-9387-1bc7c0158b3f";
 export const image3 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Fcircle.png?alt=media&token=abdd35ca-69c9-48a0-b8f5-388dd0dbc861";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F3.webp?alt=media&token=d6529319-b01c-41e0-bd6f-62e4c55332f8";
 export const image4 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-final-state-100.png?alt=media&token=ee19882f-f96e-4155-a5d3-d5ca82f8b674";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F4.webp?alt=media&token=76adc119-f947-4b6a-99ee-8ed73822da8a";
 export const image5 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-biotech-100.png?alt=media&token=6b7e312d-1d1c-4283-b45a-508e4f3a3429";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F5.webp?alt=media&token=a711f722-0c8b-4c7b-bf68-e53bd8780d55";
 export const image6 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-striped-patterns-100.png?alt=media&token=f3454d6a-23eb-46b3-9598-89b443f64025";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F6.webp?alt=media&token=592d693c-7e58-4668-879c-2e0c722c85f4";
 export const image7 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-space-100.png?alt=media&token=6143c205-8149-4326-8ea9-12fd20b75578";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F7.webp?alt=media&token=c8ba2f77-5f94-4b4f-aa72-7dc37f1dd046";
 export const image8 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-mars-100.png?alt=media&token=05e240d2-da78-43b0-ab69-18627b5732d4";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F8.webp?alt=media&token=e8edc22e-bd11-4139-86a8-2c13761b7e74";
 export const image9 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2Ficons8-rocket-100.png?alt=media&token=23bcc861-3c61-45bc-8ba5-6377f009125e";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F9.webp?alt=media&token=35b68000-ebbb-4310-8328-287af9469f95";
 
 export const redPlanet =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/mars%20planet.webp?alt=media&token=fe845de6-6322-42b4-9dc4-eef825f2f11f";
@@ -46,11 +46,11 @@ export const notFound = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff
 
 // -------------------------Footer-----------------------------
 export const footer =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/70d3f5149642665.62eb5bc27e152.webp?alt=media&token=dc369536-77f0-4463-b408-e3f2160e57a7";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/footer.webp?alt=media&token=b92f36d2-9f60-452b-8d2e-a5143628cadc";
 
 // -------------------------RightSideNav-----------------------------
 export const linkImage =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/link%20picture.png?alt=media&token=7d7e60e3-74fd-46f3-9e94-e8c28298f73d";
+  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/link.webp?alt=media&token=cfd34025-180b-4963-aba6-340224805366";
 
 export const profilePlaceHolderImage =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/profile%20%20pic.webp?alt=media&token=f19db2fd-c660-4ae0-9635-b1c0a5451e12";

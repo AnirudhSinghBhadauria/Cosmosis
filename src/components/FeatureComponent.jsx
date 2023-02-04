@@ -1,9 +1,11 @@
 import classes from "./styles/featureComponent.module.scss";
 import { Link } from "react-router-dom";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
 const FeatureComponent = (props) => {
   let link;
+  const { ref: ref, inView: firstIsVisible } = useInView();
 
   if (props.ifLink === "true") {
     link = (
@@ -40,8 +42,11 @@ const FeatureComponent = (props) => {
     link = "";
   }
 
+  let addedClass;
+  firstIsVisible ? (addedClass = classes.addedClass) : "";
+
   return (
-    <section className={classes.feature}>
+    <section ref={ref} className={`${addedClass} ${classes.feature}`}>
       <div>
         <p>{props.paraOne}</p>
         <p>{props.paraTwo}</p>

@@ -32,7 +32,12 @@ const APOD = () => {
         author="- JOHANNES KEPLER"
         className={classes.FaceComponent}
       >
-        <img alt="Three Circles" src={threeCircle} />
+        <img
+          alt="Three Circles"
+          src={threeCircle}
+          fetchpriority="high"
+          loading="eager"
+        />
       </FaceComponent>
 
       <FeatureComponent
@@ -49,9 +54,8 @@ const APOD = () => {
         customStyles={apodStyles}
         title={title}
         explanation={explanation}
-        ifLoading = {requstLoading}
-      >
-      </ImageTextContainer>
+        ifLoading={requstLoading}
+      ></ImageTextContainer>
     </Fragment>
   );
 };

@@ -52,7 +52,7 @@ const AuthContextProvider = (props) => {
     return () => unsubscribe();
   }, []);
 
-  user ? console.log(user) : console.log("NO USER");
+  user ? console.log(user.email) : console.log("NO USER");
 
   const value = {
     ifSideBarOpen: state.ifSideBarOpen,

@@ -1,12 +1,18 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { heavenAndHell } from "../assets/Links";
 import HeroPhotoSection from "../components/HeroPhotoSection";
 import classes from "./styles/dashboard.module.scss";
 import Sidestrands from "../assets/SVG-Components/Sidestrands";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
+import { useInView } from "react-intersection-observer";
 
 const Dashboard = () => {
+  const { ref: ref, inView: firstIsVisible } = useInView();
+
+  let addedClass;
+  firstIsVisible ? (addedClass = classes.addedClass) : "";
+
   return (
     <Fragment>
       <section className={classes.forefrount}>
@@ -66,7 +72,7 @@ const Dashboard = () => {
           astronomer."
         feature="APOD"
         path="/apod"
-        ifLink = 'true'
+        ifLink="true"
       />
 
       <FeatureComponent
@@ -75,7 +81,7 @@ const Dashboard = () => {
         paraTwo=" In this section, Any APOD of any particular date can be found out along with a  brief explanation written by a professional astronomer."
         feature="K-POD"
         path="/k-pod"
-        ifLink = 'true'
+        ifLink="true"
       />
 
       <FeatureComponent
@@ -84,7 +90,7 @@ const Dashboard = () => {
         paraThree="This section features Pictures that Curosity captured today. (If Any)"
         feature="CUROSITY"
         path="/curosity"
-        ifLink = 'true'
+        ifLink="true"
       />
 
       <FeatureComponent
@@ -93,7 +99,7 @@ const Dashboard = () => {
         paraThree="This Section enlightens Struggles and Sucess of this prestigious organisation."
         feature="ISRO"
         path="/isro"
-        ifLink = 'true'
+        ifLink="true"
       />
 
       <FaceComponent
@@ -103,7 +109,12 @@ const Dashboard = () => {
         author="- LORD KRISHNA"
         className={classes.borderRadius}
       >
-        <img src={heavenAndHell} alt="heaven and hell" />
+        <img
+          src={heavenAndHell}
+          alt="heaven and hell"
+          fetchpriority="high"
+          loading="eager"
+        />
       </FaceComponent>
     </Fragment>
   );

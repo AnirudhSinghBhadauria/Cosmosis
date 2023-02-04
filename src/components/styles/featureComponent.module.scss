@@ -109,3 +109,17 @@
    }
   }
 }
+
+.addedClass {
+  animation-duration: 1s;
+  animation-name: justAnimate;
+}
+
+@keyframes justAnimate {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}

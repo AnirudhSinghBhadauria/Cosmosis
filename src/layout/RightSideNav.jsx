@@ -32,6 +32,11 @@ const RightSideNav = () => {
 
   const sideBarCloser = () => changeSideBarState(false);
 
+  
+
+  
+
+
   return (
     <div className={`${classes.rightSideWrapper} ${className}`}>
       <aside className={classes.cardContainer}>
@@ -137,7 +142,7 @@ const RightSideNav = () => {
           </section>
         </NavLink>
 
-        {user && <h3>Hello, {user.displayName.split(' ')[0]}</h3>}
+        {user && user.displayName && <h3>Hello, {user.displayName.split(' ')[0]} </h3>}
       </aside>
 
       <aside className={classes.bottomContainer}>
@@ -149,6 +154,7 @@ const RightSideNav = () => {
             <img className={classes.profile} src={profilePicture} />
           </div>
         </section>
+
 
         <div className={classes.buttonContainer}>
           {!user && (
