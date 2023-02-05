@@ -90,6 +90,17 @@ img {
   }
 }
 
+.loading {
+  width: 100%;
+  padding: 1rem;
+  background-size: 300% !important;
+  background: $userGradient;
+  animation: name 10s infinite alternate;
+  border-radius: 0.8rem;
+  display: grid;
+  place-items: center;
+}
+
 .isActive {
   &:nth-of-type(1),
   &:nth-of-type(2),
@@ -105,7 +116,11 @@ img {
 
   .profileContainer {
     @include flex(row, center, center);
-    height: 3.5rem;
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 1.5rem;
+    background-color: #f0efeb;
+
     .profile {
       opacity: 1;
       height: 2.75rem;
@@ -147,9 +162,17 @@ img {
     gap: 0.75rem;
     button {
       @include flex(row, space-evenly, center);
-      padding: 0.25rem 0.5rem;
+      padding: 0.25rem 2rem;
       gap: 0.5rem;
-      border-radius: 1rem;
+      border-radius: 0.6rem;
+      border: 0px;
+      transition: all 200ms linear;
+
+      &:hover {
+        background-color: $light-green;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
 
       p {
         font-size: 1rem;
@@ -183,9 +206,11 @@ img {
 
 @media (max-width: $SCREENS) {
   .rightSideWrapper {
+    display: none;
     position: absolute;
     max-width: 35em;
     padding: 1rem;
+    right: 0rem;
 
     .sideHeading {
       display: block;
@@ -216,10 +241,11 @@ img {
 // -----------------USER-CLASSES---------------
 
 .sideBarOpen {
-  right: 0rem;
+  display: flex;
+  animation: sideBarOpen 500ms ease 1;
 }
 .sideBarClose {
-  right: -40rem;
+  animation: sideBarClose 100ms ease-in-out 1;
 }
 
 // ---------------KEYFRAMES-------------------
@@ -230,5 +256,22 @@ img {
   }
   100% {
     background-position: right;
+  }
+}
+
+@keyframes sideBarOpen {
+  0% {
+    right: -40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes sideBarClose {
+  0% {
+    right: 0rem;
+  }
+  100% {
+    right: -40rem;
   }
 }

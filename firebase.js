@@ -3,12 +3,12 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTn-xWUbYn0as6ZmLQcXqqDSLY4x-T4So",
-  authDomain: "cosmosis-ff4d9.firebaseapp.com",
-  projectId: "cosmosis-ff4d9",
-  storageBucket: "cosmosis-ff4d9.appspot.com",
-  messagingSenderId: "612922768943",
-  appId: "1:612922768943:web:f282242aa81aa12d4790da",
+  apiKey: import.meta.env.VITE_REACT_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_REACT_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_REACT_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_REACT_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_REACT_FIREBASE_MESSAGING_SENDER_ID ,
+  appId: import.meta.env.VITE_REACT_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

@@ -8,6 +8,7 @@
   border-end-start-radius: 0;
   border-end-end-radius: 0;
   height: 95vh;
+  animation: onMount 1500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1;
 
   .headingSection {
     @include flex(column, center, flex-start);
@@ -170,4 +171,12 @@
   }
 }
 
-
+// ONMOUNT-------------------------
+@keyframes onMount {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

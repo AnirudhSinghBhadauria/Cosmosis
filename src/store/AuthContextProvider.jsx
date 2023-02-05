@@ -15,12 +15,13 @@ export const authContext = createContext();
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user } = state;
+  const { user, loading } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
 
   const signinWithGoogle = async () => {
+    dispatch({type: 'LOADING', payload: true});
     try {
       const result = await signInWithPopup(auth, provider);
       const credentials = GoogleAuthProvider.credentialFromResult(result);
@@ -28,14 +29,17 @@ const AuthContextProvider = (props) => {
     } catch (error) {
       console.log(error.message);
     }
+    dispatch({type: 'LOADING', payload: false});
   };
 
   const signoutWithGoogle = async () => {
+    dispatch({type: 'LOADING', payload: true});
     try {
       await signOut(auth);
     } catch (error) {
       console.log(error.message);
     }
+    dispatch({type: 'LOADING', payload: false});
   };
 
   useEffect(() => {
@@ -52,8 +56,6 @@ const AuthContextProvider = (props) => {
     return () => unsubscribe();
   }, []);
 
-  user ? console.log(user.email) : console.log("NO USER");
-
   const value = {
     ifSideBarOpen: state.ifSideBarOpen,
     changeSideBarState: setSideBarOpen,
@@ -61,6 +63,7 @@ const AuthContextProvider = (props) => {
     signoutWithGoogle,
     user,
     profilePicture: state.profilePicture,
+    loading
   };
 
   return (

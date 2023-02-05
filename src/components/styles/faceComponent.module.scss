@@ -6,6 +6,7 @@
   background: $gradient;
   padding: clamp(2.25rem, 4.5vw, 4rem);
   gap: 2rem;
+  animation: $onMount;
 
   section:nth-of-type(1) {
     max-width: 20rem;
@@ -101,5 +102,15 @@
         width: 5rem;
       }
     }
+  }
+}
+
+// ONMOUNT-------------------------
+@keyframes onMount {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
   }
 }

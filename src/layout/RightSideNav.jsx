@@ -11,8 +11,12 @@ import { useState } from "react";
 import { profilePlaceHolderImage } from "../assets/Links";
 import { useContext } from "react";
 import { authContext } from "../store/AuthContextProvider";
+import Loader from "../components/Loader";
 
 const RightSideNav = () => {
+  let className;
+  let message;
+
   const {
     ifSideBarOpen,
     changeSideBarState,
@@ -20,22 +24,27 @@ const RightSideNav = () => {
     signoutWithGoogle,
     user,
     profilePicture,
+    loading,
   } = useContext(authContext);
 
-  let className;
   if (ifSideBarOpen === true) {
     className = `${classes.sideBarOpen}`;
   } else {
-    className = `${classes.sideBarClose}`;
+      className = `${classes.sideBarClose}`;
   }
-
 
   const sideBarCloser = () => changeSideBarState(false);
 
-  
-
-  
-
+  if (!loading) {
+    if (user && user.displayName)
+      message = <h3>Hello, {user.displayName.split(" ")[0]} </h3>;
+  } else {
+    message = (
+      <div className={classes.loading}>
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <div className={`${classes.rightSideWrapper} ${className}`}>
@@ -135,14 +144,14 @@ const RightSideNav = () => {
           <section>
             <CardContent
               heading="Curosity Rover"
-              desc="Curiosity is a car-sized Mars rover. See What Curosity Rover
+              desc="Curiosity is a Car-Sized Mars rover. See What Curosity Rover
               clicked Today or any particular day."
               color="black"
             />
           </section>
         </NavLink>
 
-        {user && user.displayName && <h3>Hello, {user.displayName.split(' ')[0]} </h3>}
+        {message}
       </aside>
 
       <aside className={classes.bottomContainer}>
@@ -151,14 +160,21 @@ const RightSideNav = () => {
             <LogoSVG />
           </Link>
           <div className={classes.profileContainer}>
-            <img className={classes.profile} src={profilePicture} />
+            {loading ? (
+              <Loader />
+            ) : (
+              <img
+                alt="profilePicture"
+                className={classes.profile}
+                src={profilePicture}
+              />
+            )}
           </div>
         </section>
 
-
         <div className={classes.buttonContainer}>
           {!user && (
-            <button onClick={signinWithGoogle}>
+            <button onClick={signinWithGoogle} disabled={loading && true}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100"
@@ -214,7 +230,7 @@ const RightSideNav = () => {
                   d="M27.5,40.091c-0.093,0-0.186-0.025-0.269-0.078l-1-0.636c-0.232-0.148-0.302-0.458-0.153-0.69 c0.15-0.233,0.46-0.299,0.69-0.153l1,0.636c0.232,0.148,0.302,0.458,0.153,0.69C27.826,40.009,27.665,40.091,27.5,40.091z"
                 />
               </svg>
-              <h1>Login</h1>
+              <h1>{loading ? "Logging In.." : "Login"}</h1>
             </button>
           )}
           {user && (

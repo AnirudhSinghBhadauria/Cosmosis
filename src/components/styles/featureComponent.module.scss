@@ -102,7 +102,7 @@
 
 @media (max-width: $MOBILE){
   .feature{
-   padding: 3rem 1rem; 
+   padding: 3rem 0.25rem; 
 
    div:nth-of-type(1){
     padding: 1.25rem;
@@ -110,16 +110,16 @@
   }
 }
 
-.addedClass {
-  animation-duration: 1s;
-  animation-name: justAnimate;
-}
+// .addedClass {
+//   animation-duration: 1s;
+//   animation-name: justAnimate;
+// }
 
-@keyframes justAnimate {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0rem);
-  }
-}
+// @keyframes justAnimate {
+//   0% {
+//     transform: translateY(100%);
+//   }
+//   100% {
+//     transform: translateY(0rem);
+//   }
+// }

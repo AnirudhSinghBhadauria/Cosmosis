@@ -23,7 +23,9 @@ const KPOD = () => {
 
   useEffect(() => {
     const config = {
-      url: `https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT&date=${date}`,
+      url: `https://api.nasa.gov/planetary/apod?api_key=${
+        import.meta.env.VITE_REACT_NASA_KEY
+      }&date=${date}`,
     };
 
     const useKPOData = (data) => {

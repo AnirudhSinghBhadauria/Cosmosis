@@ -1,9 +1,14 @@
-@import '../../../base.scss';
+@import "../../../base.scss";
 
 .cardContent {
   @include flex(column, center, space-between);
   flex: 3;
   gap: 0.2rem;
+
+  .link {
+    width: 14px;
+    height: 14px;
+  }
 
   .headingContainer {
     @include flex(row, space-between, center);

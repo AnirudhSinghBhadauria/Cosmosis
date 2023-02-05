@@ -16,7 +16,7 @@ const Curosity = () => {
 
   useEffect(() => {
     const config = {
-      url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT`,
+      url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${import.meta.env.VITE_REACT_NASA_KEY}`,
     };
 
     const useCurosityData = (data) => {

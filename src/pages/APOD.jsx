@@ -13,7 +13,7 @@ const APOD = () => {
 
   useEffect(() => {
     const config = {
-      url: "https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT",
+      url: import.meta.env.VITE_REACT_APOD_URL,
     };
 
     const nasaData = (data) => setData(data);
