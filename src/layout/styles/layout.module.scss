@@ -1,4 +1,4 @@
-@import '../../../base.scss';
+@import "../../../base.scss";
 
 .wrapper {
   display: flex;
@@ -8,10 +8,10 @@
 
   .container {
     width: 65%;
-    height: 99.9vh;
+    height: 100vh;
     overflow-y: scroll;
 
-    .sidebarOpener{
+    .sidebarOpener {
       display: none;
       position: absolute;
       border-radius: 50%;
@@ -20,11 +20,11 @@
       z-index: 999;
       transition: border 600ms ease;
     }
-    .sideBarOpen{
-     border-right: 30px solid black;
-     background-color: hotpink;
+    .sideBarOpen {
+      border-right: 30px solid black;
+      background-color: hotpink;
     }
-    .sideBarClose{
+    .sideBarClose {
       border-left: 30px solid hotpink;
       background-color: black;
     }
@@ -39,23 +39,22 @@
 
 // -------------MEDIA---------------
 
-@media (max-width: $TABLET){
-  .wrapper{
-    main{
+@media (max-width: $TABLET) {
+  .wrapper {
+    main {
       padding: 0rem;
-   
     }
   }
 }
 
-@media(max-width: $SCREENS){
-  .wrapper{
-    main{
-      padding: clamp(1.25rem,2.5vw,2rem);
+@media (max-width: $SCREENS) {
+  .wrapper {
+    main {
+      padding: clamp(1.25rem, 2.5vw, 2rem);
     }
-    .container{
-      width:100%;
-      .sidebarOpener{
+    .container {
+      width: 100%;
+      .sidebarOpener {
         display: block;
         top: 2rem;
         right: 2rem;
@@ -64,18 +63,16 @@
   }
 }
 
-@media(max-width: $MOBILE){
-  .wrapper{
-    main{
+@media (max-width: $MOBILE) {
+  .wrapper {
+    main {
       padding: 0rem;
     }
-    .container{
-      .sidebarOpener{
+    .container {
+      .sidebarOpener {
         top: 1.15rem;
         right: 1.15rem;
       }
     }
   }
 }
-
-

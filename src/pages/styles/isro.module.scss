@@ -96,7 +96,7 @@
 
   div {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     @include flex(row, space-between, center);
 
     h1 {
@@ -120,6 +120,7 @@
   }
   div:nth-of-type(2) {
     @include flex(row, center, center);
+    padding: 1.5rem;
   }
   div:nth-of-type(3) {
     position: absolute;
@@ -210,10 +211,6 @@
         max-width: 10rem;
       }
     }
-    div:nth-of-type(1),
-    div:nth-of-type(3) {
-      position: relative;
-    }
   }
 
   .firstPhotoSection {
@@ -287,6 +284,7 @@
 
 @media (max-width: $SCREENS) {
   .main {
+    border-radius: 0rem;
     justify-content: center;
     align-items: center;
     .container {

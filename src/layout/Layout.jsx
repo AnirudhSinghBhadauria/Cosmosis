@@ -7,8 +7,11 @@ import { authContext } from "../store/AuthContextProvider";
 import { useContext } from "react";
 import { useLocation } from "react-router";
 import Loader from "../components/Loader";
+import Modal from "../components/Modal";
 
 const Layout = (props) => {
+  let className;
+
   const { ifSideBarOpen, changeSideBarState } = useContext(authContext);
   const { pathname } = useLocation();
 
@@ -18,7 +21,6 @@ const Layout = (props) => {
       : changeSideBarState(false);
   };
 
-  let className;
   if (ifSideBarOpen === true) {
     className = `${classes.sideBarOpen}`;
   } else {
@@ -26,23 +28,58 @@ const Layout = (props) => {
   }
 
   const loadingHandeler = (action) => {
-    console.log('loaded Succesfully!');
+    console.log("loaded Succesfully!");
   };
 
   useEffect(() => {
     document.querySelector("#container").scrollTo(0, 0);
   }, [pathname]);
 
+  let startingX, startingY, endingX, endingY;
+  let moving = false;
+
+  const touchStartHandeler = (action) => {
+    startingX = action.changedTouches[0].clientX;
+    startingY = action.changedTouches[0].clientY;
+  };
+
+  const touchMoveHandeler = (action) => {
+    moving = true;
+    endingX = action.changedTouches[0].clientX;
+    endingY = action.changedTouches[0].clientX;
+  };
+
+  const touchEndHandeler = (action) => {
+    if (Math.abs(endingX - startingX) > Math.abs(endingY - startingY)) {
+      if (endingX > startingX) {
+        changeSideBarState(false);
+      } else {
+        changeSideBarState(true);
+      }
+    }
+    moving = false;
+  };
+
+
   return (
-    <div className={classes.wrapper}>
+    <div
+      onTouchStart={touchStartHandeler}
+      onTouchMove={touchMoveHandeler}
+      onTouchEnd={touchEndHandeler}
+      className={classes.wrapper}
+    >
       <LeftSideNav />
-      <div id="container" className={classes.container}>
+      <div
+        id="container"
+        className={classes.container}
+      >
         <div
           onClick={sideBarChangeHandeler}
           className={`${classes.sidebarOpener} ${className}`}
         ></div>
         <main>{props.children}</main>
         <Footer />
+        <Modal />
       </div>
       <RightSideNav />
     </div>
@@ -50,3 +87,5 @@ const Layout = (props) => {
 };
 
 export default Layout;
+
+

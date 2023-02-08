@@ -33,3 +33,11 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
+
+
+// ------------MEDIA-------------
+@media (max-width: $SCREENS){
+  .borderRadius{
+    border-radius: 0rem;
+  }
+}

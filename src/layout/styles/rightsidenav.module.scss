@@ -10,6 +10,7 @@
   overflow-y: scroll;
   min-width: 15rem;
   transition: all 600ms ease;
+  opacity: 1;
 
   h1,
   p {
@@ -25,7 +26,7 @@
     color: black;
     padding: 0.5rem 0.75rem;
     background-size: 300% !important;
-    background: $userGradient;
+    background: white;
     animation: name 10s infinite alternate;
   }
 
@@ -35,7 +36,7 @@
 
   .cardContainer {
     @include flex(column, center, center);
-    gap: 1.25rem;
+    gap: 1rem;
   }
   .svgContainer {
     @include flex(row, center, center);
@@ -94,7 +95,7 @@ img {
   width: 100%;
   padding: 1rem;
   background-size: 300% !important;
-  background: $userGradient;
+  background: white;
   animation: name 10s infinite alternate;
   border-radius: 0.8rem;
   display: grid;
@@ -167,10 +168,11 @@ img {
       border-radius: 0.6rem;
       border: 0px;
       transition: all 200ms linear;
-
+      
       &:hover {
-        background-color: $light-green;
-        border-radius: 1rem;
+        background-color: #f3ccff;
+        color: black;
+        border-radius: 0.9rem;
         cursor: pointer;
       }
 
@@ -181,6 +183,11 @@ img {
         width: 30px;
         height: 30px;
       }
+    }
+    .disabled{
+      background-color: #F3CCFF;
+      color: black;
+      pointer-events: none;
     }
   }
 }
@@ -206,11 +213,11 @@ img {
 
 @media (max-width: $SCREENS) {
   .rightSideWrapper {
-    display: none;
     position: absolute;
     max-width: 35em;
     padding: 1rem;
     right: 0rem;
+    opacity: 0;
 
     .sideHeading {
       display: block;
@@ -221,6 +228,21 @@ img {
       border-radius: 1rem;
       font-size: 1.5rem;
     }
+    .isActive {
+      &:nth-of-type(1) {
+        background-color: $light-pink;
+      }
+      &:nth-of-type(2) {
+        background-color: $light-blue;
+      }
+      &:nth-of-type(3) {
+        background-color: $light-yellow;
+      }
+      &:nth-of-type(4) {
+        background-color: $light-green;
+      }
+    }
+    
   }
 }
 
@@ -241,11 +263,14 @@ img {
 // -----------------USER-CLASSES---------------
 
 .sideBarOpen {
-  display: flex;
-  animation: sideBarOpen 500ms ease 1;
+  animation: sideBarOpen 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 1;
+  opacity: 1;
 }
 .sideBarClose {
-  animation: sideBarClose 100ms ease-in-out 1;
+  animation: sideBarClose 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 1;
+}
+.sidebarVisibility{
+  visibility: hidden;
 }
 
 // ---------------KEYFRAMES-------------------
@@ -261,17 +286,17 @@ img {
 
 @keyframes sideBarOpen {
   0% {
-    right: -40rem;
+   opacity: 0;
   }
   100% {
-    right: 0rem;
+    opacity: 1;
   }
 }
 @keyframes sideBarClose {
   0% {
-    right: 0rem;
+    opacity: 1;
   }
   100% {
-    right: -40rem;
+    opacity: 0;
   }
 }

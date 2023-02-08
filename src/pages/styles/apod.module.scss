@@ -7,3 +7,10 @@
   border-bottom-right-radius: 0;
 }
 
+// --------------MEDIA-------------
+
+@media (max-width: $SCREENS){
+  .FaceComponent{
+    border-radius: 0rem;
+  }
+}

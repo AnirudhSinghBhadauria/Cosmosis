@@ -1,4 +1,4 @@
-@import '../../../base.scss';
+@import "../../../base.scss";
 
 .apodContainer {
   @include flex(column, space-evenly, center);
@@ -42,3 +42,14 @@
     }
   }
 }
+
+.loaderContainer {
+  background-color: $light-grey-assent;
+  width: 100%;
+  height: 30rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+

@@ -29,8 +29,10 @@ const RightSideNav = () => {
 
   if (ifSideBarOpen === true) {
     className = `${classes.sideBarOpen}`;
+  } else if (window.innerWidth <= 768 && ifSideBarOpen === false) {
+    className = `${classes.sidebarVisibility} ${classes.sideBarClose}`;
   } else {
-      className = `${classes.sideBarClose}`;
+    className = `${classes.sideBarClose}`;
   }
 
   const sideBarCloser = () => changeSideBarState(false);
@@ -174,7 +176,10 @@ const RightSideNav = () => {
 
         <div className={classes.buttonContainer}>
           {!user && (
-            <button onClick={signinWithGoogle} disabled={loading && true}>
+            <button
+              onClick={signinWithGoogle}
+              className={loading ? classes.disabled : ''}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100"
@@ -230,7 +235,7 @@ const RightSideNav = () => {
                   d="M27.5,40.091c-0.093,0-0.186-0.025-0.269-0.078l-1-0.636c-0.232-0.148-0.302-0.458-0.153-0.69 c0.15-0.233,0.46-0.299,0.69-0.153l1,0.636c0.232,0.148,0.302,0.458,0.153,0.69C27.826,40.009,27.665,40.091,27.5,40.091z"
                 />
               </svg>
-              <h1>{loading ? "Logging In.." : "Login"}</h1>
+              <h1>{loading ? "Logging In" : "Login"}</h1>
             </button>
           )}
           {user && (

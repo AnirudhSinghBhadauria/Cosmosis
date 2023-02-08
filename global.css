@@ -17,3 +17,8 @@ body {
 *:focus {
   outline: none;
 }
+::selection{
+  color: black;
+  background-color: yellow;
+  border-radius: 0.5rem;
+}

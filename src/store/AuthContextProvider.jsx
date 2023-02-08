@@ -3,10 +3,10 @@ import { createContext } from "react";
 import { auth, provider } from "../../firebase";
 import { authReducer, INITIAL_STATE } from "../reducers/authReducer";
 import {
-  signInWithPopup,
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
+  signInWithPopup,
 } from "firebase/auth";
 import { profilePlaceHolderImage } from "../assets/Links";
 
@@ -15,7 +15,7 @@ export const authContext = createContext();
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user, loading } = state;
+  const { user, loading, modalMessage } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
@@ -24,10 +24,10 @@ const AuthContextProvider = (props) => {
     dispatch({type: 'LOADING', payload: true});
     try {
       const result = await signInWithPopup(auth, provider);
-      const credentials = GoogleAuthProvider.credentialFromResult(result);
-      const token = credentials.accessToken;
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
     dispatch({type: 'LOADING', payload: false});
   };
@@ -63,8 +63,11 @@ const AuthContextProvider = (props) => {
     signoutWithGoogle,
     user,
     profilePicture: state.profilePicture,
-    loading
+    loading,
+    modalMessage,
   };
+
+  user ? console.log(user.email) : console.log('NO USER');
 
   return (
     <authContext.Provider value={value}>{props.children}</authContext.Provider>

@@ -7,6 +7,7 @@ export const INITIAL_STATE = {
   ifSideBarOpen: false,
   user: {},
   profilePicture: profilePlaceHolderImage,
+  modalMessage : '',
 };
 
 export const authReducer = (state, action) => {
@@ -41,6 +42,11 @@ export const authReducer = (state, action) => {
         ...state,
         profilePicture: action.payload,
       };
+      case 'MODAL-MESSAGE':
+        return{
+          ...state,
+          modalMessage: action.payload
+        }
     default:
       return state;
   }
