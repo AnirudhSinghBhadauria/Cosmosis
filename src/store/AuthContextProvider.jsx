@@ -15,31 +15,39 @@ export const authContext = createContext();
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user, loading, modalMessage } = state;
+  const { user, loading, modalMessage, error } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
 
   const signinWithGoogle = async () => {
-    dispatch({type: 'LOADING', payload: true});
+    dispatch({ type: "LOADING", payload: true });
+    dispatch({ type: "ERROR", payload: false });
     try {
       const result = await signInWithPopup(auth, provider);
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
+      console.log(token)
     } catch (error) {
-      console.log(error);
+      console.log(error.code);
+      dispatch({ type: "ERROR", payload: true });
+      dispatch({ type: "MODAL-MESSAGE", payload: error.code });
     }
-    dispatch({type: 'LOADING', payload: false});
+    dispatch({ type: "LOADING", payload: false });
   };
 
   const signoutWithGoogle = async () => {
-    dispatch({type: 'LOADING', payload: true});
+    dispatch({ type: "LOADING", payload: true });
+    dispatch({ type: "ERROR", payload: false });
+
     try {
       await signOut(auth);
     } catch (error) {
-      console.log(error.message);
+      console.log(error.code);
+      dispatch({ type: "ERROR", payload: true });
+      dispatch({ type: "MODAL-MESSAGE", payload: error.code });
     }
-    dispatch({type: 'LOADING', payload: false});
+    dispatch({ type: "LOADING", payload: false });
   };
 
   useEffect(() => {
@@ -56,6 +64,10 @@ const AuthContextProvider = (props) => {
     return () => unsubscribe();
   }, []);
 
+  const modalHandeler = () => {
+    dispatch({ type: "ERROR", payload: false });
+  };
+
   const value = {
     ifSideBarOpen: state.ifSideBarOpen,
     changeSideBarState: setSideBarOpen,
@@ -65,9 +77,11 @@ const AuthContextProvider = (props) => {
     profilePicture: state.profilePicture,
     loading,
     modalMessage,
+    error,
+    modalHandeler,
   };
 
-  user ? console.log(user.email) : console.log('NO USER');
+  user ? console.log(user.email) : console.log("NO USER");
 
   return (
     <authContext.Provider value={value}>{props.children}</authContext.Provider>

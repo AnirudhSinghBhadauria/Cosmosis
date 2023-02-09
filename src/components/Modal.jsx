@@ -1,24 +1,16 @@
-import React from "react";
+import { Fragment } from "react";
 import { createPortal } from "react-dom";
-import classes from "./styles/modal.module.scss";
+import ModalMaker from "./ModalMaker";
 
-const Modal = () => {
-  const modalCloseHandeler = () => {};
-
+const ErrorModal = (props) => {
   return (
-    <div className={classes.modalWrapper}>
-      <p>{props.message}</p>
-      <button onClick={modalCloseHandeler}>Close</button>
-    </div>
+    <Fragment>
+      {createPortal(
+        <ModalMaker onClick={props.onClick} message={props.message} />,
+        document.querySelector("#error-modal")
+      )}
+    </Fragment>
   );
 };
 
-createPortal(
-  <Modal
-    message={props.message}
-    modalCloseHandeler={props.modalCloseHandeler}
-  />,
-  document.querySelector("#error-modal")
-);
-
-export default Modal;
+export default ErrorModal;

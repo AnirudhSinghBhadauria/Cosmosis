@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import LeftSideNav from "./LeftSideNav";
 import RightSideNav from "./RightSideNav";
 import Footer from "./Footer";
@@ -6,13 +6,18 @@ import classes from "./styles/layout.module.scss";
 import { authContext } from "../store/AuthContextProvider";
 import { useContext } from "react";
 import { useLocation } from "react-router";
-import Loader from "../components/Loader";
-import Modal from "../components/Modal";
+import ErrorModal from "../components/Modal";
 
 const Layout = (props) => {
   let className;
 
-  const { ifSideBarOpen, changeSideBarState } = useContext(authContext);
+  const {
+    ifSideBarOpen,
+    changeSideBarState,
+    modalMessage,
+    error,
+    modalHandeler,
+  } = useContext(authContext);
   const { pathname } = useLocation();
 
   const sideBarChangeHandeler = () => {
@@ -60,6 +65,11 @@ const Layout = (props) => {
     moving = false;
   };
 
+  const loadManager =()=>{
+    console.log('loaded Succesfully')
+  }
+
+  // localStorage.getItem()
 
   return (
     <div
@@ -67,19 +77,17 @@ const Layout = (props) => {
       onTouchMove={touchMoveHandeler}
       onTouchEnd={touchEndHandeler}
       className={classes.wrapper}
+      onLoad={loadManager}
     >
       <LeftSideNav />
-      <div
-        id="container"
-        className={classes.container}
-      >
+      <div id="container" className={classes.container}>
         <div
           onClick={sideBarChangeHandeler}
           className={`${classes.sidebarOpener} ${className}`}
         ></div>
         <main>{props.children}</main>
         <Footer />
-        <Modal />
+        {error && <ErrorModal message={modalMessage} onClick={modalHandeler} />}
       </div>
       <RightSideNav />
     </div>
@@ -87,5 +95,3 @@ const Layout = (props) => {
 };
 
 export default Layout;
-
-
