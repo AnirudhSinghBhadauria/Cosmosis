@@ -4,13 +4,13 @@
   @include flex(row, center, center);
   width: 100%;
   border-radius: 0rem;
-  background-color: #ff5050;
   padding: 0.5rem 10rem;
   color: white;
   bottom: 0rem;
   position: absolute;
   z-index: 100;
   font-family: $heading-font;
+  animation: mount 200ms linear 1;
 
   section {
     @include flex(row, space-between, center);
@@ -20,25 +20,71 @@
       font-size: clamp(1rem, 2vw, 1.5rem);
     }
     p {
-      font-size: clamp(.75rem, 1.5vw, 1rem);
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      max-width: 35rem;
+      padding-right: 2rem;
+    }
+  
+    .button {
+      padding: 0.25rem 1rem;
+      border-radius: 2rem;
+      font-size: clamp(0.8rem, 1.65vw, 1.15rem);
+      color: black;
+      background-color: white;
+      border: 0px;
+      cursor: pointer;
+      font-weight: 700;
+      font-family: $heading-font;
+
+      transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      &:hover {
+        background-color: rgb(238, 238, 238);
+      }
     }
   }
+}
 
-  .button {
-    padding: 0.25rem 1rem;
-    border-radius: 2rem;
-    font-size: clamp(.80rem, 1.65vw, 1.15rem);
-    color: black;
-    background-color: white;
-    border: 0px;
-    cursor: pointer;
-    font-weight: 700;
-    font-family: $heading-font;
+// ----------------MEDIA----------------
 
-    transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-
-    &:hover {
-      background-color: rgb(238, 238, 238);
+@media (max-width: $TABLET) {
+  .modalWrapper {
+    padding: 0.5rem 5rem;
+    section {
+      width: 100%;
     }
+  }
+}
+
+@media (max-width: $TABLET) {
+  .modalWrapper {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (max-width: $MOBILE) {
+  .modalWrapper {
+    padding: 0.5rem 1rem;
+    section {
+      div {
+        h1 {
+          flex: 2;
+        }
+        p {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+// --------------ANIMATION--------------
+
+@keyframes mount {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

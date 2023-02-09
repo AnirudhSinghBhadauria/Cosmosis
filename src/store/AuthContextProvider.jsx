@@ -15,7 +15,8 @@ export const authContext = createContext();
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user, loading, modalMessage, error } = state;
+  const { user, loading, modalMessage, error, ifVisited } =
+    state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
@@ -27,9 +28,8 @@ const AuthContextProvider = (props) => {
       const result = await signInWithPopup(auth, provider);
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-      console.log(token)
+      console.log(token);
     } catch (error) {
-      console.log(error.code);
       dispatch({ type: "ERROR", payload: true });
       dispatch({ type: "MODAL-MESSAGE", payload: error.code });
     }
@@ -43,7 +43,6 @@ const AuthContextProvider = (props) => {
     try {
       await signOut(auth);
     } catch (error) {
-      console.log(error.code);
       dispatch({ type: "ERROR", payload: true });
       dispatch({ type: "MODAL-MESSAGE", payload: error.code });
     }
@@ -59,6 +58,13 @@ const AuthContextProvider = (props) => {
       } else {
         dispatch({ type: "DP", payload: profilePlaceHolderImage });
       }
+
+      if (localStorage.getItem("ifVisited") !== "true") {
+        dispatch({ type: "IFVISITED", payload: false });
+        localStorage.setItem("ifVisited", "true");
+      } else {
+        dispatch({ type: "IFVISITED", payload: true });
+      }
     });
 
     return () => unsubscribe();
@@ -66,6 +72,10 @@ const AuthContextProvider = (props) => {
 
   const modalHandeler = () => {
     dispatch({ type: "ERROR", payload: false });
+  };
+
+  const ifVisitedHandeler = () => {
+    dispatch({ type: "IFVISITED", payload: true });
   };
 
   const value = {
@@ -79,6 +89,8 @@ const AuthContextProvider = (props) => {
     modalMessage,
     error,
     modalHandeler,
+    ifVisited,
+    ifVisitedHandeler,
   };
 
   user ? console.log(user.email) : console.log("NO USER");

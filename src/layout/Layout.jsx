@@ -17,6 +17,8 @@ const Layout = (props) => {
     modalMessage,
     error,
     modalHandeler,
+    ifVisited,
+    ifVisitedHandeler,
   } = useContext(authContext);
   const { pathname } = useLocation();
 
@@ -32,13 +34,11 @@ const Layout = (props) => {
     className = `${classes.sideBarClose}`;
   }
 
-  const loadingHandeler = (action) => {
-    console.log("loaded Succesfully!");
-  };
-
   useEffect(() => {
     document.querySelector("#container").scrollTo(0, 0);
   }, [pathname]);
+
+  // GESTURES
 
   let startingX, startingY, endingX, endingY;
   let moving = false;
@@ -65,19 +65,12 @@ const Layout = (props) => {
     moving = false;
   };
 
-  const loadManager =()=>{
-    console.log('loaded Succesfully')
-  }
-
-  // localStorage.getItem()
-
   return (
     <div
       onTouchStart={touchStartHandeler}
       onTouchMove={touchMoveHandeler}
       onTouchEnd={touchEndHandeler}
       className={classes.wrapper}
-      onLoad={loadManager}
     >
       <LeftSideNav />
       <div id="container" className={classes.container}>
@@ -87,7 +80,22 @@ const Layout = (props) => {
         ></div>
         <main>{props.children}</main>
         <Footer />
-        {error && <ErrorModal message={modalMessage} onClick={modalHandeler} />}
+        {error && (
+          <ErrorModal
+            heading="Oops, it looks like something went wrong."
+            message={modalMessage}
+            onClick={modalHandeler}
+            className={classes.errorModal}
+          />
+        )}
+        {!ifVisited && (
+          <ErrorModal
+            heading="Welcome,"
+            message="Welcome to Cosmosis. We're glad you're here. Explore the wonders of the universe and expand your knowledge."
+            onClick={ifVisitedHandeler}
+            className={classes.newUser}
+          />
+        )}
       </div>
       <RightSideNav />
     </div>

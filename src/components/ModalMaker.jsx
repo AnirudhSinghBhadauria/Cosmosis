@@ -3,12 +3,10 @@ import classes from "./styles/modal.module.scss";
 
 const ModalMaker = (props) => {
   return (
-    <div className={classes.modalWrapper}>
+    <div className={`${classes.modalWrapper} ${props.className}`}>
       <section>
         <div>
-          <h1>
-          Oops, it looks like something went wrong.
-          </h1>
+          <h1>{props.heading}</h1>
           <p>{props.message}</p>
         </div>
         <button className={classes.button} onClick={props.onClick}>

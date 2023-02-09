@@ -6,7 +6,12 @@ const ErrorModal = (props) => {
   return (
     <Fragment>
       {createPortal(
-        <ModalMaker onClick={props.onClick} message={props.message} />,
+        <ModalMaker
+          className={props.className}
+          onClick={props.onClick}
+          heading={props.heading}
+          message={props.message}
+        />,
         document.querySelector("#error-modal")
       )}
     </Fragment>

@@ -6,9 +6,6 @@ import KnowYAPOD from "../assets/SVG-Components/KnowYAPOD";
 import LogoSVG from "../assets/SVG-Components/LogoSVG";
 import { Link, NavLink } from "react-router-dom";
 import CardContent from "../components/CardContent";
-import Button from "../components/Button";
-import { useState } from "react";
-import { profilePlaceHolderImage } from "../assets/Links";
 import { useContext } from "react";
 import { authContext } from "../store/AuthContextProvider";
 import Loader from "../components/Loader";
@@ -25,6 +22,7 @@ const RightSideNav = () => {
     user,
     profilePicture,
     loading,
+    userState,
   } = useContext(authContext);
 
   if (ifSideBarOpen === true) {
@@ -178,7 +176,7 @@ const RightSideNav = () => {
           {!user && (
             <button
               onClick={signinWithGoogle}
-              className={loading ? classes.disabled : ''}
+              className={loading ? classes.disabled : ""}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

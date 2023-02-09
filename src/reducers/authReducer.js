@@ -3,12 +3,12 @@ import { profilePlaceHolderImage } from "../assets/Links";
 export const INITIAL_STATE = {
   loading: false,
   error: false,
-  ifVisited: false,
   ifSideBarOpen: false,
   user: {},
   profilePicture: profilePlaceHolderImage,
   modalMessage: "",
   modalState: false,
+  ifVisited: true,
 };
 
 export const authReducer = (state, action) => {
@@ -22,11 +22,6 @@ export const authReducer = (state, action) => {
       return {
         ...state,
         loading: action.payload,
-      };
-    case "VISITED":
-      return {
-        ...state,
-        ifVisited: action.payload,
       };
     case "SIDEBAR":
       return {
@@ -47,6 +42,11 @@ export const authReducer = (state, action) => {
       return {
         ...state,
         modalMessage: action.payload,
+      };
+    case "IFVISITED":
+      return {
+        ...state,
+        ifVisited: action.payload,
       };
     default:
       return state;
