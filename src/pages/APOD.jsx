@@ -23,6 +23,7 @@ const APOD = () => {
 
   const apodStyles = { background: `url(${url}) center/cover` };
 
+
   return (
     <Fragment>
       <FaceComponent
@@ -32,12 +33,12 @@ const APOD = () => {
         author="- JOHANNES KEPLER"
         className={classes.FaceComponent}
       >
-        <img
-          alt="Three Circles"
-          src={threeCircle}
-          fetchpriority="high"
-          loading="eager"
-        />
+          <img
+            alt="Three Circles"
+            src={threeCircle}
+            fetchpriority="high"
+            loading="eager"
+          />
       </FaceComponent>
 
       <FeatureComponent
@@ -55,7 +56,7 @@ const APOD = () => {
         title={title}
         explanation={explanation}
         ifLoading={requstLoading}
-      ></ImageTextContainer>
+      />
     </Fragment>
   );
 };

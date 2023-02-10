@@ -10,6 +10,7 @@
   text-align: center;
 
   .notFound {
+    min-height: 90vh;
     h1 {
       font-size: clamp(1.25rem, 2.5vw, 2rem);
       font-family: $heading-font;

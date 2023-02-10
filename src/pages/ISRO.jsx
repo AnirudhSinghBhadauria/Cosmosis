@@ -3,7 +3,6 @@ import { earthTop, isroCycle1, isroCycle2 } from "../assets/Links";
 import classes from "./styles/isro.module.scss";
 import { HomiBhabha, VikramSarabhai } from "../assets/data";
 import ScientistSection from "../components/ScientistSection";
-import IsroSVG from "../assets/SVG-Components/IsroSVG";
 
 const ISRO = () => {
   return (
@@ -43,7 +42,12 @@ const ISRO = () => {
           </p>
         </div>
         <div>
-          <img src={earthTop} alt="earth" />
+          <img
+            fetchpriority="high"
+            loading="eager"
+            src={earthTop}
+            alt="earth"
+          />
         </div>
         <div>
           <p>

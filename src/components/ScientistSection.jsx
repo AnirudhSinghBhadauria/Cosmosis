@@ -6,7 +6,7 @@ const ScientistSection = (props) => {
     <Fragment>
       <section className={classes.scientistContainer}>
         <div>
-          <img loading="eager" src={props.image} />
+          <img loading="eager" fetchpriority='high' src={props.image} />
         </div>
         <div>
             <p>{props.quote}</p>

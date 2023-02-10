@@ -19,6 +19,8 @@ const Layout = (props) => {
     modalHandeler,
     ifVisited,
     ifVisitedHandeler,
+    ifLogin,
+    loginHandeler,
   } = useContext(authContext);
   const { pathname } = useLocation();
 
@@ -78,8 +80,11 @@ const Layout = (props) => {
           onClick={sideBarChangeHandeler}
           className={`${classes.sidebarOpener} ${className}`}
         ></div>
-        <main>{props.children}</main>
+        
+          <main>{props.children}</main>
+
         <Footer />
+
         {error && (
           <ErrorModal
             heading="Oops, it looks like something went wrong."
@@ -94,6 +99,14 @@ const Layout = (props) => {
             message="Welcome to Cosmosis. We're glad you're here. Explore the wonders of the universe and expand your knowledge."
             onClick={ifVisitedHandeler}
             className={classes.newUser}
+          />
+        )}
+        {ifLogin && (
+          <ErrorModal
+            heading="Logged In."
+            message="Explore the wonders of the universe with us as we bring to you."
+            onClick={loginHandeler}
+            className={classes.login}
           />
         )}
       </div>

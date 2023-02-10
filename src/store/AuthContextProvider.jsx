@@ -15,8 +15,14 @@ export const authContext = createContext();
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user, loading, modalMessage, error, ifVisited } =
-    state;
+  const {
+    user,
+    loading,
+    modalMessage,
+    error,
+    ifVisited,
+    ifLogin,
+  } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
@@ -28,7 +34,8 @@ const AuthContextProvider = (props) => {
       const result = await signInWithPopup(auth, provider);
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-      console.log(token);
+
+      dispatch({ type: "IFLOGIN", payload: true });
     } catch (error) {
       dispatch({ type: "ERROR", payload: true });
       dispatch({ type: "MODAL-MESSAGE", payload: error.code });
@@ -78,6 +85,9 @@ const AuthContextProvider = (props) => {
     dispatch({ type: "IFVISITED", payload: true });
   };
 
+  const loginHandeler = () => dispatch({ type: "IFLOGIN", payload: false });
+ 
+
   const value = {
     ifSideBarOpen: state.ifSideBarOpen,
     changeSideBarState: setSideBarOpen,
@@ -91,9 +101,12 @@ const AuthContextProvider = (props) => {
     modalHandeler,
     ifVisited,
     ifVisitedHandeler,
+    ifLogin,
+    loginHandeler,
   };
 
   user ? console.log(user.email) : console.log("NO USER");
+  console.log("ifLogin Value : " + ifLogin);
 
   return (
     <authContext.Provider value={value}>{props.children}</authContext.Provider>

@@ -14,17 +14,16 @@ const ImageTextContainer = (props) => {
           props.children
         )}
       </div>
+
       <div className={`${classes.textContent} ${props.className}`}>
-        {props.ifLoading ? (
-          <div className={classes.loaderContainer}>
-            <Loader />
-          </div>
-        ) : (
-          <div>
-            <h1>{props.title}</h1>
-            <p>{props.explanation}</p>
-          </div>
-        )}
+        <div>
+          <h1 className={props.ifLoading ? classes.skeletonLoader : ""}>
+            {props.title}
+          </h1>
+          <p className={props.ifLoading ? classes.skeletonLoader : ""}>
+            {props.explanation}
+          </p>
+        </div>
       </div>
     </section>
   );

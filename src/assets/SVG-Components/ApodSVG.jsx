@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const ApodSVG = (props) => {
   const apod = (
@@ -18,4 +18,4 @@ const ApodSVG = (props) => {
   return apod;
 };
 
-export default ApodSVG;
+export default memo(ApodSVG);

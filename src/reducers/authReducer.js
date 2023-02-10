@@ -9,6 +9,7 @@ export const INITIAL_STATE = {
   modalMessage: "",
   modalState: false,
   ifVisited: true,
+  ifLogin: false,
 };
 
 export const authReducer = (state, action) => {
@@ -48,6 +49,11 @@ export const authReducer = (state, action) => {
         ...state,
         ifVisited: action.payload,
       };
+      case 'IFLOGIN':
+        return{
+          ...state,
+          ifLogin: action.payload
+        }
     default:
       return state;
   }

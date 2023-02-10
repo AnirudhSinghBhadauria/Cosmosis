@@ -40,9 +40,7 @@ const RightSideNav = () => {
       message = <h3>Hello, {user.displayName.split(" ")[0]} </h3>;
   } else {
     message = (
-      <div className={classes.loading}>
-        <Loader />
-      </div>
+     <h3 className={classes.skeletonLoader}>.</h3>
     );
   }
 
@@ -159,16 +157,12 @@ const RightSideNav = () => {
           <Link to="/" onClick={sideBarCloser} preventScrollReset={false}>
             <LogoSVG />
           </Link>
-          <div className={classes.profileContainer}>
-            {loading ? (
-              <Loader />
-            ) : (
+          <div className={loading ? classes.profileLoading : classes.profileContainer}>
               <img
                 alt="profilePicture"
                 className={classes.profile}
                 src={profilePicture}
               />
-            )}
           </div>
         </section>
 

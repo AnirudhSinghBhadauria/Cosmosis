@@ -5,13 +5,8 @@ import classes from "./styles/dashboard.module.scss";
 import Sidestrands from "../assets/SVG-Components/Sidestrands";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
-import { useInView } from "react-intersection-observer";
 
 const Dashboard = () => {
-  const { ref: ref, inView: firstIsVisible } = useInView();
-
-  let addedClass;
-  firstIsVisible ? (addedClass = classes.addedClass) : "";
 
   return (
     <Fragment>

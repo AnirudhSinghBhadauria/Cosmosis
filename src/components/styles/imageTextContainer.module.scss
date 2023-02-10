@@ -15,7 +15,11 @@
     height: 30rem;
     border-radius: 1rem;
     position: relative;
-    background-color: $light-grey-assent;
+    border: 2px solid #252525;
+  }
+
+  img {
+    opacity: 1;
   }
 
   .textContent {
@@ -25,7 +29,7 @@
     padding: 1rem;
     background-color: $light-grey-assent;
     border-radius: 1rem;
-    min-height: 17rem;
+    min-height: 5rem;
 
     h1 {
       margin-bottom: 1rem;
@@ -44,12 +48,31 @@
 }
 
 .loaderContainer {
-  background-color: $light-grey-assent;
   width: 100%;
   height: 30rem;
   border-radius: 1rem;
   display: grid;
   place-items: center;
+  animation: skelly 600ms infinite alternate;
+  opacity: 1;
 }
 
+.skeletonLoader {
+  opacity: 0.5;
+  border-radius: 0.8rem;
+  background-color: #ebeaea;
+  animation: skelly 600ms infinite alternate;
+}
 
+@keyframes skelly {
+  $first-color: #414345;
+  $second-color: #414345ec;
+  0% {
+    background-color: $first-color;
+    color: $first-color;
+  }
+  100% {
+    background-color: $second-color;
+    color: $second-color;
+  }
+}

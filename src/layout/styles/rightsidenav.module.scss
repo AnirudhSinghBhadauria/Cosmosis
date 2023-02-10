@@ -21,13 +21,11 @@
     font-family: $heading-font;
     font-size: 1.5rem;
     text-align: start;
+    color: black;
     width: 100%;
     border-radius: 0.75rem;
-    color: black;
     padding: 0.5rem 0.75rem;
-    background-size: 300% !important;
     background: white;
-    animation: name 10s infinite alternate;
   }
 
   .sideHeading {
@@ -91,15 +89,13 @@ img {
   }
 }
 
-.loading {
+.skeletonLoader {
+  text-align: center;
   width: 100%;
-  padding: 1rem;
-  background-size: 300% !important;
-  background: white;
-  animation: name 10s infinite alternate;
   border-radius: 0.8rem;
-  display: grid;
-  place-items: center;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  animation: skelly 600ms infinite alternate;
 }
 
 .isActive {
@@ -121,6 +117,7 @@ img {
     width: 2.75rem;
     border-radius: 1.5rem;
     background-color: #f0efeb;
+    overflow: hidden;
 
     .profile {
       opacity: 1;
@@ -135,12 +132,13 @@ img {
       align-self: flex-start;
       border-radius: 1rem;
     }
-    .green {
-      background-color: $sucsess;
-    }
-    .red {
-      background-color: $warning;
-    }
+  }
+  .profileLoading{
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    animation: skelly 600ms infinite alternate;
   }
 
   section {
@@ -275,14 +273,6 @@ img {
 
 // ---------------KEYFRAMES-------------------
 
-@keyframes name {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
-}
 
 @keyframes sideBarOpen {
   0% {
@@ -298,5 +288,18 @@ img {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes skelly {
+  $first-color: #ffffff;
+  $second-color: #b8b8b8;
+  0% {
+    background-color: $first-color;
+    color: $first-color;
+  }
+  100% {
+    background-color: $second-color;
+    color: $second-color;
   }
 }
