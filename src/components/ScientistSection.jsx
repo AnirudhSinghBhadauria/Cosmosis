@@ -11,7 +11,12 @@ const ScientistSection = ({
   image,
   quote,
 }) => {
-  const paras = [paraOne, paraTwo, paraThree, paraFour];
+  const paras = [
+    { para: paraOne, key: "one" },
+    { para: paraTwo, key: "two" },
+    { para: paraThree, key: "three" },
+    { para: paraFour, key: "four" },
+  ];
   return (
     <Fragment>
       <section className={classes.scientistContainer}>
@@ -34,7 +39,9 @@ const ScientistSection = ({
           <h1>{year}</h1>
         </div>
         <div>
-          {paras.map((para) =><p>{para}</p>)}
+          {paras.map(({ para, key }) => (
+            <p key={key}>{para}</p>
+          ))}
         </div>
       </section>
     </Fragment>

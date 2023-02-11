@@ -105,8 +105,8 @@ const AuthContextProvider = (props) => {
     loginHandeler,
   };
 
-  user ? console.log(user.email) : console.log("NO USER");
-  console.log("ifLogin Value : " + ifLogin);
+  // user ? console.log(user.email) : console.log("NO USER");
+  // console.log("ifLogin Value : " + ifLogin);
 
   return (
     <authContext.Provider value={value}>{props.children}</authContext.Provider>
