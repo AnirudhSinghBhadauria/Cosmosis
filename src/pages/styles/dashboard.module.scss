@@ -50,7 +50,7 @@
     }
 
     .imageContainer {
-      @include flex(column, center, space-evenly);
+      @include flex(column, center, flex-end);
       gap: 1.75rem;
       flex: 4;
 

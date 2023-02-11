@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, memo } from "react";
 import { createPortal } from "react-dom";
 import ModalMaker from "./ModalMaker";
 
@@ -18,4 +18,4 @@ const ErrorModal = (props) => {
   );
 };
 
-export default ErrorModal;
+export default memo(ErrorModal);

@@ -1,22 +1,3 @@
-// -------------------------Dashboard-Photo-Section-----------------------------
-export const image1 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F1.webp?alt=media&token=a6aaca27-9890-4d8f-9f08-acf90e7ad93e";
-export const image2 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F2.webp?alt=media&token=da458601-e9af-494d-9387-1bc7c0158b3f";
-export const image3 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F3.webp?alt=media&token=d6529319-b01c-41e0-bd6f-62e4c55332f8";
-export const image4 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F4.webp?alt=media&token=76adc119-f947-4b6a-99ee-8ed73822da8a";
-export const image5 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F5.webp?alt=media&token=a711f722-0c8b-4c7b-bf68-e53bd8780d55";
-export const image6 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F6.webp?alt=media&token=592d693c-7e58-4668-879c-2e0c722c85f4";
-export const image7 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F7.webp?alt=media&token=c8ba2f77-5f94-4b4f-aa72-7dc37f1dd046";
-export const image8 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F8.webp?alt=media&token=e8edc22e-bd11-4139-86a8-2c13761b7e74";
-export const image9 =
-  "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/Hero%20Photo%20Section%2F9.webp?alt=media&token=35b68000-ebbb-4310-8328-287af9469f95";
 
 export const redPlanet =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/mars%20planet.webp?alt=media&token=fe845de6-6322-42b4-9dc4-eef825f2f11f";

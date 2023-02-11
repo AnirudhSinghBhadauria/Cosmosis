@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const LogoSVG = (props) => {
   const logo = (
@@ -21,4 +21,4 @@ const LogoSVG = (props) => {
   return logo;
 };
 
-export default LogoSVG;
+export default memo(LogoSVG);

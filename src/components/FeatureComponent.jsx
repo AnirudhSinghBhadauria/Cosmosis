@@ -1,6 +1,6 @@
 import classes from "./styles/featureComponent.module.scss";
 import { Link } from "react-router-dom";
-import React from "react";
+import React, {memo} from "react";
 
 const FeatureComponent = (props) => {
   let link;
@@ -57,4 +57,4 @@ const FeatureComponent = (props) => {
   );
 };
 
-export default FeatureComponent;
+export default memo(FeatureComponent);

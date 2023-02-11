@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./styles/modal.module.scss";
 
 const ModalMaker = (props) => {
@@ -17,4 +17,4 @@ const ModalMaker = (props) => {
   );
 };
 
-export default ModalMaker;
+export default memo(ModalMaker);

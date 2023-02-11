@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const ProfleSVG = () => {
   return (
@@ -19,4 +19,4 @@ const ProfleSVG = () => {
   );
 };
 
-export default ProfleSVG;
+export default memo(ProfleSVG);

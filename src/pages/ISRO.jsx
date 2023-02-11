@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { earthTop, isroCycle1, isroCycle2 } from "../assets/Links";
+import React, { Fragment, memo } from "react";
+import { earthTop, homiBhabha, isroCycle1, isroCycle2 } from "../assets/Links";
 import classes from "./styles/isro.module.scss";
 import { HomiBhabha, VikramSarabhai } from "../assets/data";
 import ScientistSection from "../components/ScientistSection";
@@ -78,7 +78,12 @@ const ISRO = () => {
           rocket from Thumba Equatorial Launching Station,the rocket was
           transported to lift-off pad ON A BICYCLE.
         </p>
-        <img src={isroCycle1} alt="isro cycle one" />
+        <img
+          alt="first-Photo-Section"
+          fetchpriority="high"
+          loading="eager"
+          src={isroCycle1}
+        />
       </section>
 
       <ScientistSection
@@ -93,7 +98,12 @@ const ISRO = () => {
       />
 
       <section className={classes.secondPhotoSection}>
-        <img src={isroCycle2} alt="Second Photo Section" />
+        <img
+          src={isroCycle2}
+          alt="second-Photo-Section"
+          fetchpriority="high"
+          loading="eager"
+        />
         <p>
           The first rocket was so light and small that it was transported on a
           bicycle to the Thumba Launching Station in Thiruvananthapuram, Kerala.
@@ -103,4 +113,4 @@ const ISRO = () => {
   );
 };
 
-export default ISRO;
+export default memo(ISRO);

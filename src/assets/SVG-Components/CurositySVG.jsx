@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const CurositySVG = (props) => {
   return (
@@ -16,4 +16,4 @@ const CurositySVG = (props) => {
   );
 };
 
-export default CurositySVG;
+export default memo(CurositySVG);

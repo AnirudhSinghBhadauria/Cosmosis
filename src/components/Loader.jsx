@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import classes from "./styles/loader.module.scss";
 
 const Loader = () => {

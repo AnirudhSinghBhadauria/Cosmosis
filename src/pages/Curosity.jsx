@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, memo } from "react";
 import { today } from "../assets/data";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
@@ -16,7 +16,9 @@ const Curosity = () => {
 
   useEffect(() => {
     const config = {
-      url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${import.meta.env.VITE_REACT_NASA_KEY}`,
+      url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${
+        import.meta.env.VITE_REACT_NASA_KEY
+      }`,
     };
 
     const useCurosityData = (data) => {
@@ -57,7 +59,9 @@ const Curosity = () => {
         className={classes.displayNone}
         ifLoading={requstLoading}
       >
+        <label htmlFor="date"></label>
         <input
+          id="date"
           type="date"
           className={classes.datePicker}
           min="1996-01-01"
@@ -70,4 +74,4 @@ const Curosity = () => {
   );
 };
 
-export default Curosity;
+export default memo(Curosity);

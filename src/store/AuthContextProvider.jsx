@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { memo, useEffect, useReducer } from "react";
 import { createContext } from "react";
 import { auth, provider } from "../../firebase";
 import { authReducer, INITIAL_STATE } from "../reducers/authReducer";
@@ -113,4 +113,4 @@ const AuthContextProvider = (props) => {
   );
 };
 
-export default AuthContextProvider;
+export default memo(AuthContextProvider);

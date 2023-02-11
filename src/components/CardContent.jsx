@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./styles/cardContent.module.scss";
 import { linkImage } from "../assets/Links";
 
@@ -17,4 +17,4 @@ const CardContent = (props) => {
   );
 };
 
-export default CardContent;
+export default memo(CardContent);

@@ -1,5 +1,5 @@
 import classes from "./styles/imageTextContainer.module.scss";
-import React from "react";
+import React, { memo } from "react";
 import Loader from "./Loader";
 
 const ImageTextContainer = (props) => {
@@ -27,6 +27,6 @@ const ImageTextContainer = (props) => {
       </div>
     </section>
   );
-};
+}
 
-export default ImageTextContainer;
+export default memo(ImageTextContainer);

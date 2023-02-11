@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 
 const Sidestrands = () => {
   return (
@@ -116,4 +116,4 @@ const Sidestrands = () => {
   );
 };
 
-export default Sidestrands;
+export default memo(Sidestrands);

@@ -8,7 +8,6 @@ import { Link, NavLink } from "react-router-dom";
 import CardContent from "../components/CardContent";
 import { useContext } from "react";
 import { authContext } from "../store/AuthContextProvider";
-import Loader from "../components/Loader";
 
 const RightSideNav = () => {
   let className;
@@ -154,7 +153,7 @@ const RightSideNav = () => {
 
       <aside className={classes.bottomContainer}>
         <section>
-          <Link to="/" onClick={sideBarCloser} preventScrollReset={false}>
+          <Link to="/" aria-label="Logo-Home" onClick={sideBarCloser} preventScrollReset={false}>
             <LogoSVG />
           </Link>
           <div className={loading ? classes.profileLoading : classes.profileContainer}>

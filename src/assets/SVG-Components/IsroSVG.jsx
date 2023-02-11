@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const IsroSVG = (props) => {
+const IsroSVG = () => {
   const isro = (
     <svg
       id="Layer_1"
@@ -76,4 +76,4 @@ const IsroSVG = (props) => {
   return isro;
 };
 
-export default IsroSVG;
+export default memo(IsroSVG);

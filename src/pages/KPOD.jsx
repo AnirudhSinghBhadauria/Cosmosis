@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, memo } from "react";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { cube } from "../assets/Links";
@@ -62,7 +62,9 @@ const KPOD = () => {
         explanation={explanation}
         ifLoading={requstLoading}
       >
+        <label htmlFor="date"></label>
         <input
+          id="date"
           type="date"
           min="1996-01-01"
           max={today}
@@ -75,6 +77,4 @@ const KPOD = () => {
   );
 };
 
-export default KPOD;
-
-// `https://api.nasa.gov/planetary/apod?api_key=toYv1iFdC2whBimODshxo0M04nnTVIG08fCaiLBT&date=2023-01-30`
+export default memo(KPOD);
