@@ -49,6 +49,7 @@
   }
 }
 
+
 // ------------------------MEADIA----------------------
 
 @media (max-width: $LAPTOP) {
@@ -93,7 +94,7 @@
 
 @media (max-width: $MOBILE) {
   .faceContainer {
-  gap: 3.25rem;
+    gap: 3.25rem;
     padding: 1rem;
     justify-content: space-evenly;
 

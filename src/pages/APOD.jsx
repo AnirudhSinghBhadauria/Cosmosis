@@ -23,6 +23,9 @@ const APOD = () => {
 
   const apodStyles = { background: `url(${url}) center/cover` };
 
+  const loadingHandeler = () => {
+    console.log("loading done");
+  };
 
   return (
     <Fragment>
@@ -33,12 +36,13 @@ const APOD = () => {
         author="- JOHANNES KEPLER"
         className={classes.FaceComponent}
       >
-          <img
-            alt="Three Circles"
-            src={threeCircle}
-            fetchpriority="high"
-            loading="eager"
-          />
+        <img
+          decoding="async"
+          alt="Three Circles"
+          src={threeCircle}
+          fetchpriority="high"
+          loading="eager"
+        />
       </FaceComponent>
 
       <FeatureComponent

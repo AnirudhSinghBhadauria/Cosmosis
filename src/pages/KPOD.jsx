@@ -45,7 +45,13 @@ const KPOD = () => {
         author="- T.H. HUXLEY"
         className={classes.borderRadius}
       >
-        <img alt="cube" src={cube} fetchpriority="high" loading="eager" />
+        <img
+          decoding="async"
+          alt="cube"
+          src={cube}
+          fetchpriority="high"
+          loading="eager"
+        />
       </FaceComponent>
 
       <FeatureComponent

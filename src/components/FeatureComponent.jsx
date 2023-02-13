@@ -7,7 +7,7 @@ const FeatureComponent = (props) => {
 
   if (props.ifLink === "true") {
     link = (
-      <Link className={classes.link} to={props.path} preventScrollReset={false}>
+      <Link aria-lable='navigation' disabled={'true'} className={classes.link} to={props.path}>
         TAKE ME TO THAT
         <svg
           xmlns="http://www.w3.org/2000/svg"

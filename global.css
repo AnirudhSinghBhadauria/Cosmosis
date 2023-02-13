@@ -24,3 +24,25 @@ body {
   color: black;
   background-color: yellow;
 }
+
+
+.loading {
+  opacity: 0.5;
+  border-radius: 0.8rem;
+  background-color: #ebeaea;
+  animation: skelly 600ms infinite alternate;
+}
+.notLoading {
+  background: transparent;
+}
+
+@keyframes skelly {
+  0% {
+    background-color: #414345;
+    color: #414345;
+  }
+  100% {
+    background-color: #414345be;
+    color: #414345be;
+  }
+}

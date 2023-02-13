@@ -1,15 +1,19 @@
 @import "../../../base.scss";
 
-.wrapper {
-  @include flex(row, center, center);
+.container {
+  @include flex(column, center, center);
   background: $gradient;
   height: 99vh;
   width: 100%;
   gap: 1rem;
 
-  h1{
-     color: #d1d1d131;
-     font-size: 2rem;
-     font-family: $heading-font;
+  .wrapper {
+    @include flex(row, center, center);
+    gap: 1rem;
+    h1 {
+      color: #d1d1d131;
+      font-size: 2rem;
+      font-family: $heading-font;
+    }
   }
 }

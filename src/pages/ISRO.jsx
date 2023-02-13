@@ -5,6 +5,8 @@ import { HomiBhabha, VikramSarabhai } from "../assets/data";
 import ScientistSection from "../components/ScientistSection";
 
 const ISRO = () => {
+  const astronaut =
+    "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c";
   return (
     <Fragment>
       <section className={classes.main}>
@@ -18,7 +20,8 @@ const ISRO = () => {
           <img
             fetchpriority="high"
             loading="eager"
-            src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c"
+            decoding="async"
+            src={astronaut}
             alt="floating Astronaut"
           />
         </div>

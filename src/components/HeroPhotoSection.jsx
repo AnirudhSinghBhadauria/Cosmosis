@@ -1,7 +1,9 @@
-import React, { memo, Fragment, useState, useEffect } from "react";
-import classes from "./styles/heroPhotoSection.module.scss";
+import React, { memo, Fragment, useState } from "react";
 
 const HeroPhotoSection = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const imageLoadHandeler = () => setIsLoading(false);
+
   const imageRowOne = [
     {
       key: "one",
@@ -61,42 +63,51 @@ const HeroPhotoSection = () => {
       <div>
         {imageRowOne.map(({ src, alt, key }) => {
           return (
-            <img
-              decoding="async"
-              key={key}
-              src={src}
-              alt={alt}
-              fetchpriority="high"
-              loading="eager"
-            />
+            <div key={key} className={isLoading ? "loading" : "notLoading"}>
+              <img
+                onLoad={imageLoadHandeler}
+                decoding="async"
+                key={key}
+                src={src}
+                alt={alt}
+                fetchpriority="high"
+                loading="eager"
+              />
+            </div>
           );
         })}
       </div>
       <div>
         {imageRowTwo.map(({ src, alt, key }) => {
           return (
-            <img
-              decoding="async"
-              key={key}
-              src={src}
-              alt={alt}
-              fetchpriority="high"
-              loading="eager"
-            />
+            <div key={key} className={isLoading ? "loading" : "notLoading"}>
+              <img
+                onLoad={imageLoadHandeler}
+                decoding="async"
+                key={key}
+                src={src}
+                alt={alt}
+                fetchpriority="high"
+                loading="eager"
+              />
+            </div>
           );
         })}
       </div>
       <div>
         {imageRowThree.map(({ src, alt, key }) => {
           return (
-            <img
-              decoding="async"
-              key={key}
-              src={src}
-              alt={alt}
-              fetchpriority="high"
-              loading="eager"
-            />
+            <div key={key} className={isLoading ? "loading" : "notLoading"}>
+              <img
+                onLoad={imageLoadHandeler}
+                decoding="async"
+                key={key}
+                src={src}
+                alt={alt}
+                fetchpriority="high"
+                loading="eager"
+              />
+            </div>
           );
         })}
       </div>

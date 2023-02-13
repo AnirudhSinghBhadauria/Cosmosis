@@ -20,7 +20,7 @@ const FaceComponent = (props) => {
           <p>o o</p>
         </div>
 
-        <div className={props.className}>{props.children}</div>
+        <div>{props.children}</div>
       </section>
     </section>
   );

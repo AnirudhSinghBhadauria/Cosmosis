@@ -21,7 +21,6 @@ const RightSideNav = () => {
     user,
     profilePicture,
     loading,
-    userState,
   } = useContext(authContext);
 
   if (ifSideBarOpen === true) {
@@ -38,130 +37,100 @@ const RightSideNav = () => {
     if (user && user.displayName)
       message = <h3>Hello, {user.displayName.split(" ")[0]} </h3>;
   } else {
-    message = (
-     <h3 className={classes.skeletonLoader}>.</h3>
-    );
+    message = <h3 className={classes.skeletonLoader}>.</h3>;
   }
+
+  const sideBar = [
+    {
+      key: "apod",
+      element: <ApodSVG />,
+      to: "/apod",
+      heading: "APOD",
+      desc: "  Astornomical Picture of the Day. Each day a different photograph of our fascinating universe is featured.",
+      color: "black",
+    },
+    {
+      key: "k-pod",
+      element: <KnowYAPOD />,
+      to: "/k-pod",
+      heading: "Your APOD",
+      desc: " See Astronomical Picture of the any Particular Day, Any Day, Maybe Your Birthday?",
+      color: "black",
+    },
+    {
+      key: "isro",
+      element: <IsroSVG />,
+      to: "/isro",
+      heading: "ISRO",
+      desc: "The Indian Space Research Organisation is the national spaceagency of India.",
+      color: "black",
+    },
+    {
+      key: "curosity",
+      element: <CurositySVG />,
+      to: "/curosity",
+      heading: "Curosity Rover",
+      desc: "Curiosity is a Car-Sized Mars rover. See What Curosity Rover clicked Today or any particular day.",
+      color: "black",
+    },
+  ];
 
   return (
     <div className={`${classes.rightSideWrapper} ${className}`}>
       <aside className={classes.cardContainer}>
         <h1 className={classes.sideHeading}>
-          <Link to="/" preventScrollReset={false} onClick={sideBarCloser}>
+          <Link to="/" onClick={sideBarCloser}>
             COSMOSIS
           </Link>
         </h1>
 
-        <NavLink
-          to="/apod"
-          onClick={sideBarCloser}
-          preventScrollReset={false}
-          className={({ isActive }) =>
-            isActive
-              ? ` ${classes.isActive} ${classes.baseClass} `
-              : `${classes.baseClass}`
-          }
-        >
-          <section className={classes.svgContainer}>
-            <ApodSVG />
-          </section>
+        {sideBar.map(({ key, element, to, heading, desc, color }) => {
+          return (
+            <NavLink
+              key={key}
+              to={to}
+              onClick={sideBarCloser}
+              className={({ isActive }) =>
+                isActive
+                  ? ` ${classes.isActive} ${classes.baseClass} `
+                  : `${classes.baseClass}`
+              }
+            >
+              <section className={classes.svgContainer}>{element}</section>
 
-          <section>
-            <CardContent
-              heading="APOD"
-              desc="  Astornomical Picture of the Day. Each day a different photograph
-              of our fascinating universe is featured."
-              color="black"
-            />
-          </section>
-        </NavLink>
-
-        <NavLink
-          to="/k-pod"
-          preventScrollReset={false}
-          onClick={sideBarCloser}
-          className={({ isActive }) =>
-            isActive
-              ? ` ${classes.isActive} ${classes.baseClass} `
-              : `${classes.baseClass}`
-          }
-        >
-          <section className={classes.svgContainer}>
-            <KnowYAPOD />
-          </section>
-
-          <section>
-            <CardContent
-              heading="Your APOD"
-              desc=" See Astronomical Picture of the any Particular Day, Any Day, Maybe
-              Your Birthday?"
-              color="black"
-            />
-          </section>
-        </NavLink>
-
-        <NavLink
-          to="/isro"
-          preventScrollReset={false}
-          onClick={sideBarCloser}
-          className={({ isActive }) =>
-            isActive
-              ? ` ${classes.isActive} ${classes.baseClass} `
-              : `${classes.baseClass}`
-          }
-        >
-          <section className={classes.svgContainer}>
-            <IsroSVG />
-          </section>
-
-          <section>
-            <CardContent
-              heading="ISRO"
-              desc="The Indian Space Research Organisation is the national space
-              agency of India."
-              color="black"
-            />
-          </section>
-        </NavLink>
-
-        <NavLink
-          to="/curosity"
-          preventScrollReset={false}
-          onClick={sideBarCloser}
-          className={({ isActive }) =>
-            isActive
-              ? ` ${classes.isActive} ${classes.baseClass} `
-              : `${classes.baseClass}`
-          }
-        >
-          <section className={classes.svgContainer}>
-            <CurositySVG />
-          </section>
-
-          <section>
-            <CardContent
-              heading="Curosity Rover"
-              desc="Curiosity is a Car-Sized Mars rover. See What Curosity Rover
-              clicked Today or any particular day."
-              color="black"
-            />
-          </section>
-        </NavLink>
+              <section>
+                <CardContent heading={heading} desc={desc} color={color} />
+              </section>
+            </NavLink>
+          );
+        })}
 
         {message}
       </aside>
 
       <aside className={classes.bottomContainer}>
         <section>
-          <Link to="/" aria-label="Logo-Home" onClick={sideBarCloser} preventScrollReset={false}>
+          <Link
+            to="/"
+            aria-label="Logo-Home"
+            onClick={sideBarCloser}
+            preventScrollReset={false}
+          >
             <LogoSVG />
           </Link>
-          <div className={loading ? classes.profileLoading : classes.profileContainer}>
-              <img
-                alt="profilePicture"
-                className={classes.profile}
-                src={profilePicture}
-              />
+          <div
+            className={
+              loading ? classes.profileLoading : classes.profileContainer
+            }
+          >
+            <img
+              alt="profilePicture"
+              className={classes.profile}
+              src={profilePicture}
+              decoding='async'
+              fetchpriority='high'
+              loading="eager"
+            />
           </div>
         </section>
 
