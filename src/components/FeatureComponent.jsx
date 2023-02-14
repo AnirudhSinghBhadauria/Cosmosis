@@ -7,7 +7,7 @@ const FeatureComponent = (props) => {
 
   if (props.ifLink === "true") {
     link = (
-      <Link aria-lable='navigation' disabled={'true'} className={classes.link} to={props.path}>
+      <Link className={classes.link} to={props.path}>
         TAKE ME TO THAT
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const FeatureComponent = (props) => {
 
 
   return (
-    <section  className={classes.feature}>
+    <section className={classes.feature}>
       <div>
         <p>{props.paraOne}</p>
         <p>{props.paraTwo}</p>
