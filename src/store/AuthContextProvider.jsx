@@ -1,28 +1,22 @@
 import React, { memo, useEffect, useReducer } from "react";
 import { createContext } from "react";
-import { auth, provider } from "../../firebase";
+import { auth, provider, db } from "../../firebase";
 import { authReducer, INITIAL_STATE } from "../reducers/authReducer";
+import { profilePlaceHolderImage } from "../assets/Links";
 import {
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
   signInWithPopup,
 } from "firebase/auth";
-import { profilePlaceHolderImage } from "../assets/Links";
+import { getDocs, collection } from "firebase/firestore";
 
 export const authContext = createContext();
 
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const {
-    user,
-    loading,
-    modalMessage,
-    error,
-    ifVisited,
-    ifLogin,
-  } = state;
+  const { user, loading, modalMessage, error, ifVisited, ifLogin, feature } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
@@ -74,6 +68,21 @@ const AuthContextProvider = (props) => {
       }
     });
 
+    const getData = async () => {
+      const snapshot = collection(db, "FEATURES");
+      const docsSnap = await getDocs(snapshot);
+
+      const transformedFeatures = [];
+
+      docsSnap.forEach((doc) => {
+        transformedFeatures.push(doc.data());
+      });
+
+      dispatch({ type: "FEATURE", payload: transformedFeatures });
+    };
+
+    getData();
+
     return () => unsubscribe();
   }, []);
 
@@ -86,7 +95,6 @@ const AuthContextProvider = (props) => {
   };
 
   const loginHandeler = () => dispatch({ type: "IFLOGIN", payload: false });
- 
 
   const value = {
     ifSideBarOpen: state.ifSideBarOpen,
@@ -103,10 +111,8 @@ const AuthContextProvider = (props) => {
     ifVisitedHandeler,
     ifLogin,
     loginHandeler,
+    feature,
   };
-
-  // user ? console.log(user.email) : console.log("NO USER");
-  // console.log("ifLogin Value : " + ifLogin);
 
   return (
     <authContext.Provider value={value}>{props.children}</authContext.Provider>

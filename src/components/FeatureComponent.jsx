@@ -11,8 +11,8 @@ const FeatureComponent = (props) => {
         TAKE ME TO THAT
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="135"
-          height="13"
+          width="105"
+          height="10"
           viewBox="0 0 135 13"
           fill="none"
         >

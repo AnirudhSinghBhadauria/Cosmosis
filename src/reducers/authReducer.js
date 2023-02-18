@@ -10,6 +10,7 @@ export const INITIAL_STATE = {
   modalState: false,
   ifVisited: true,
   ifLogin: false,
+  feature: [],
 };
 
 export const authReducer = (state, action) => {
@@ -53,7 +54,12 @@ export const authReducer = (state, action) => {
         return{
           ...state,
           ifLogin: action.payload
-        }
+        };
+      case 'FEATURE':
+        return{
+          ...state,
+          feature: action.payload
+        };
     default:
       return state;
   }

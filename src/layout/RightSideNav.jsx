@@ -127,8 +127,8 @@ const RightSideNav = () => {
               alt="profilePicture"
               className={classes.profile}
               src={profilePicture}
-              decoding='async'
-              fetchpriority='high'
+              decoding="async"
+              fetchpriority="high"
               loading="eager"
             />
           </div>

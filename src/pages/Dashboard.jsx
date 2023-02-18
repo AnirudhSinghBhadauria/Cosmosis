@@ -1,60 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import { heavenAndHell } from "../assets/Links";
 import HeroPhotoSection from "../components/HeroPhotoSection";
 import classes from "./styles/dashboard.module.scss";
 import Sidestrands from "../assets/SVG-Components/Sidestrands";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
+import { authContext } from "../store/AuthContextProvider";
 
 const Dashboard = () => {
-  const features = [
-    {
-      key:'one',
-      paraOne:
-        "Astronomy Picture of the Day. The pictures and descriptions often relate to current events in astronomy and space exploration.",
-      paraTwo:
-        "Each day a different image or photograph of our fascinating universeis featured, along with a brief explanation written by a professional astronomer.",
-      paraThree: "",
-      feature: "APOD",
-      path: "/apod",
-      ifLink: "true",
-    },
-    {
-      key:'two',
-      paraOne:
-        "Each day a different image or photograph of our fascinating universe is featured in APOD,",
-      paraTwo:
-        "In this section, Any APOD of any particular date can be found out along with a  brief explanation written by a professional astronomer.",
-      paraThree: "",
-      feature: "K-POD",
-      path: "/k-pod",
-      ifLink: "true",
-    },
-    {
-      key:'three',
-      paraOne:
-        "Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory mission.",
-      paraTwo:
-        "NASA's Curiosity rover is currently roaming Mars' landscape cliking pictures and looking for signs of life and learning about the Red Planet's unique environment.",
-      paraThree:
-        "This section features Pictures that Curosity captured today. (If Any)",
-      feature: "CUROSITY",
-      path: "/curosity",
-      ifLink: "true",
-    },
-    {
-      key:'four',
-      paraOne:
-        "The Indian Space Research Organisation is the national space agency of India, headquartered in Bengaluru.",
-      paraTwo:
-        "ISRO is the research and development wing of DOS and is responsible for the execution of the national space programme.",
-      paraThree:
-        "This Section enlightens Struggles and Sucess of this prestigious organisation.",
-      feature: "ISRO",
-      path: "/isro",
-      ifLink: "true",
-    },
-  ];
+  const { feature } = useContext(authContext);
 
   return (
     <Fragment>
@@ -107,21 +61,22 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {features.map(
-        ({ paraOne, paraTwo, paraThree, path, feature, ifLink, key }) => {
-          return (
-            <FeatureComponent
-              paraOne={paraOne}
-              paraTwo={paraTwo}
-              paraThree={paraThree}
-              path={path}
-              feature={feature}
-              ifLink={ifLink}
-              key={key}
-            />
-          );
-        }
-      )}
+      {feature &&
+        feature.map(
+          ({ paraOne, paraTwo, paraThree, path, feature, ifLink, key }) => {
+            return (
+              <FeatureComponent
+                paraOne={paraOne}
+                paraTwo={paraTwo}
+                paraThree={paraThree}
+                path={path}
+                feature={feature}
+                ifLink={ifLink}
+                key={key}
+              />
+            );
+          }
+        )}
 
       <FaceComponent
         number="C.XXI S.XXXII"
