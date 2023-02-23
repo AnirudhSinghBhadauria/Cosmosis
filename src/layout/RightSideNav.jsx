@@ -75,6 +75,17 @@ const RightSideNav = () => {
     },
   ];
 
+  const svgElements = [
+    <ApodSVG />,
+    <KnowYAPOD />,
+    <IsroSVG />,
+    <CurositySVG />,
+  ];
+
+  for(const key in svgElements){
+    console.log(svgElements[key]);
+  }
+
   return (
     <div className={`${classes.rightSideWrapper} ${className}`}>
       <aside className={classes.cardContainer}>
@@ -84,7 +95,7 @@ const RightSideNav = () => {
           </Link>
         </h1>
 
-        {sideBar.map(({ key, element, to, heading, desc, color }) => {
+        {sideBar.map(({ key, to, heading, desc, color }) => {
           return (
             <NavLink
               key={key}
@@ -96,7 +107,9 @@ const RightSideNav = () => {
                   : `${classes.baseClass}`
               }
             >
-              <section className={classes.svgContainer}>{element}</section>
+              <section className={classes.svgContainer}>
+               anirudh
+              </section>
 
               <section>
                 <CardContent heading={heading} desc={desc} color={color} />
