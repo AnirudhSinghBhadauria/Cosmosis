@@ -1,15 +1,27 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { threeCircle } from "../assets/Links";
 import classes from "./styles/apod.module.scss";
 import useHttps from "../hooks/useHttps";
 import ImageTextContainer from "../components/ImageTextContainer";
+import { authContext } from "../store/AuthContextProvider";
 
 const APOD = () => {
   const { sendRequest, requstLoading } = useHttps();
   const [data, setData] = useState({});
   const { url, title, explanation } = data;
+  const { feature } = useContext(authContext);
+
+  const face = {
+    number: "C.XI S.XXI",
+    heading: "THE HARMONY OF WORLDS",
+    quote:
+      "The diversity of phenomenon of nature is so great, and the treasures hidden in the heavens so rich, pricisly in order that the human mind shall never be locking in fresh nourishment.",
+    author: "- JOHANNES KEPLER",
+  };
+
+  const { number, heading, quote, author } = face;
 
   useEffect(() => {
     const config = {
@@ -23,17 +35,13 @@ const APOD = () => {
 
   const apodStyles = { background: `url(${url}) center/cover` };
 
-  const loadingHandeler = () => {
-    console.log("loading done");
-  };
-
   return (
     <Fragment>
       <FaceComponent
-        number="C.XI S.XXI"
-        heading="THE HARMONY OF WORLDS"
-        quote="The diversity of phenomenon of nature is so great, and the treasures hidden in the heavens so rich, pricisly in order that the human mind shall never be locking in fresh nourishment."
-        author="- JOHANNES KEPLER"
+        number={number}
+        heading={heading}
+        quote={quote}
+        author={author}
         className={classes.FaceComponent}
       >
         <img
@@ -46,13 +54,10 @@ const APOD = () => {
       </FaceComponent>
 
       <FeatureComponent
-        paraOne="Astronomy Picture of the Day. The pictures and descriptions often
-          relate to current events in astronomy and space exploration."
-        paraTwo="Each day a different image or photograph of our fascinating universe
-          is featured, along with a brief explanation written by a professional
-          astronomer."
-        feature="APOD"
-        path="/apod"
+        paraOne={feature[0]?.paraOne}
+        paraTwo={feature[0]?.paraTwo}
+        feature={feature[0]?.feature}
+        path={feature[0]?.path}
       />
 
       <ImageTextContainer

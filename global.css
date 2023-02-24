@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -25,7 +25,6 @@ body {
   background-color: yellow;
 }
 
-
 .loading {
   opacity: 0.5;
   border-radius: 0.8rem;
@@ -34,6 +33,20 @@ body {
 }
 .notLoading {
   background: transparent;
+}
+
+.text-loading {
+  width: 100%;
+  height: clamp(2.25rem, 4.5vw, 4rem);
+  border-radius: 0.5rem;
+  animation: skelly 600ms infinite alternate;
+}
+
+.heading-loading{
+  height: 20rem;
+  width: 6rem;
+  border-radius: 0.75rem;
+  animation: skelly 600ms infinite alternate;
 }
 
 @keyframes skelly {

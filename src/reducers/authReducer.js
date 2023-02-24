@@ -11,6 +11,9 @@ export const INITIAL_STATE = {
   ifVisited: true,
   ifLogin: false,
   feature: [],
+  featLoad: false,
+  isro: [],
+  isroLoad: false,
 };
 
 export const authReducer = (state, action) => {
@@ -50,16 +53,31 @@ export const authReducer = (state, action) => {
         ...state,
         ifVisited: action.payload,
       };
-      case 'IFLOGIN':
-        return{
+    case "IFLOGIN":
+      return {
+        ...state,
+        ifLogin: action.payload,
+      };
+    case "FEATURE":
+      return {
+        ...state,
+        feature: action.payload,
+      };
+    case "FEAT-LOAD":
+      return {
+        ...state,
+        featLoad: action.payload,
+      };
+      case "ISRO":
+        return {
           ...state,
-          ifLogin: action.payload
+          isro: action.payload,
         };
-      case 'FEATURE':
-        return{
-          ...state,
-          feature: action.payload
-        };
+        case "ISRO-LOAD":
+          return {
+            ...state,
+            isroLoad: action.payload,
+          };
     default:
       return state;
   }

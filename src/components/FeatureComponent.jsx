@@ -1,9 +1,12 @@
 import classes from "./styles/featureComponent.module.scss";
 import { Link } from "react-router-dom";
-import React, {memo} from "react";
+import React, { memo, useContext } from "react";
+import { authContext } from "../store/AuthContextProvider";
 
 const FeatureComponent = (props) => {
   let link;
+
+  const { featLoad } = useContext(authContext);
 
   if (props.ifLink === "true") {
     link = (
@@ -40,17 +43,24 @@ const FeatureComponent = (props) => {
     link = "";
   }
 
-
   return (
     <section className={classes.feature}>
       <div>
-        <p>{props.paraOne}</p>
-        <p>{props.paraTwo}</p>
+        {featLoad ? (
+          <div className="text-loading"></div>
+        ) : (
+          <p>{props.paraOne}</p>
+        )}
+        {featLoad ? (
+          <div className="text-loading"></div>
+        ) : (
+          <p>{props.paraTwo}</p>
+        )}
         {props.paraThree && <p>{props.paraThree}</p>}
 
         {link}
       </div>
-      <div>
+      <div className={featLoad ? "heading-loading" : ""}>
         <h1>{props.feature}</h1>
       </div>
     </section>

@@ -43,7 +43,6 @@ const RightSideNav = () => {
   const sideBar = [
     {
       key: "apod",
-      element: <ApodSVG />,
       to: "/apod",
       heading: "APOD",
       desc: "  Astornomical Picture of the Day. Each day a different photograph of our fascinating universe is featured.",
@@ -51,7 +50,6 @@ const RightSideNav = () => {
     },
     {
       key: "k-pod",
-      element: <KnowYAPOD />,
       to: "/k-pod",
       heading: "Your APOD",
       desc: " See Astronomical Picture of the any Particular Day, Any Day, Maybe Your Birthday?",
@@ -59,7 +57,6 @@ const RightSideNav = () => {
     },
     {
       key: "isro",
-      element: <IsroSVG />,
       to: "/isro",
       heading: "ISRO",
       desc: "The Indian Space Research Organisation is the national spaceagency of India.",
@@ -67,24 +64,12 @@ const RightSideNav = () => {
     },
     {
       key: "curosity",
-      element: <CurositySVG />,
       to: "/curosity",
       heading: "Curosity Rover",
       desc: "Curiosity is a Car-Sized Mars rover. See What Curosity Rover clicked Today or any particular day.",
       color: "black",
     },
   ];
-
-  const svgElements = [
-    <ApodSVG />,
-    <KnowYAPOD />,
-    <IsroSVG />,
-    <CurositySVG />,
-  ];
-
-  for(const key in svgElements){
-    console.log(svgElements[key]);
-  }
 
   return (
     <div className={`${classes.rightSideWrapper} ${className}`}>
@@ -108,7 +93,10 @@ const RightSideNav = () => {
               }
             >
               <section className={classes.svgContainer}>
-               anirudh
+                {key === "apod" && <ApodSVG />}
+                {key === "k-pod" && <KnowYAPOD />}
+                {key === "isro" && <IsroSVG />}
+                {key === "curosity" && <CurositySVG />}
               </section>
 
               <section>

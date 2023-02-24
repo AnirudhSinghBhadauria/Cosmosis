@@ -3,19 +3,31 @@ import FaceComponent from "../components/FaceComponent";
 import FeatureComponent from "../components/FeatureComponent";
 import { cube } from "../assets/Links";
 import { useState } from "react";
-import { today } from "../assets/data";
 import classes from "./styles/kpod.module.scss";
 import ImageTextContainer from "../components/ImageTextContainer";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import useHttps from "../hooks/useHttps";
+import { authContext } from "../store/AuthContextProvider";
 
 const KPOD = () => {
   const [date, setDate] = useState("2023-01-11");
   const [kpodData, setKPOData] = useState("");
   const [kpodStyles, setKpodStyles] = useState();
   const { requstLoading, sendRequest } = useHttps();
+  const contextData = useContext(authContext);
+  const { feature, today } = contextData;
 
   const { explanation, title } = kpodData;
+
+  const face = {
+    number: "C.XI S.XXI",
+    heading: "SHORES OF THE COSMIC OCEAN",
+    quote:
+      "The known is finite, the unknown is infinite, intelectually we stand on a islet in the midst of an imitable ocean of inexcellebility. Our busniess in every genration is to reclaim a little more land.",
+    author: "- T.H. HUXLEY",
+  };
+
+  const { number, heading, quote, author } = face;
 
   const dateChangeHandeler = (event) => {
     setDate(event.target.value);
@@ -39,10 +51,10 @@ const KPOD = () => {
   return (
     <Fragment>
       <FaceComponent
-        number="C.XI S.XXI"
-        heading="SHORES OF THE COSMIC OCEAN"
-        quote="The known is finite, the unknown is infinite, intelectually we stand on a islet in the midst of an imitable ocean of inexcellebility. Our busniess in every genration is to reclaim a little more land."
-        author="- T.H. HUXLEY"
+        number={number}
+        heading={heading}
+        quote={quote}
+        author={author}
         className={classes.borderRadius}
       >
         <img
@@ -55,11 +67,10 @@ const KPOD = () => {
       </FaceComponent>
 
       <FeatureComponent
-        paraOne="Each day a different image or photograph of our fascinating universe
-        is featured in APOD,"
-        paraTwo=" In this section, Any APOD of any particular date can be found out along with a  brief explanation written by a professional astronomer."
-        feature="K-POD"
-        path="/k-pod"
+        paraOne={feature[2]?.paraOne}
+        paraTwo={feature[3]?.paraTwo}
+        feature={feature[3]?.feature}
+        path={feature[3]?.path}
       />
 
       <ImageTextContainer

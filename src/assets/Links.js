@@ -25,6 +25,8 @@ export const isroCycle2 =
 
 export const notFound = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/notFound.webp?alt=media&token=5b0adba1-a2e7-42d0-a981-ded2e9bdd07f'
 
+export const astro = 'https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c'
+
 // -------------------------Footer-----------------------------
 export const footer =
   "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/footer.webp?alt=media&token=b92f36d2-9f60-452b-8d2e-a5143628cadc";

@@ -9,14 +9,25 @@ import {
   onAuthStateChanged,
   signInWithPopup,
 } from "firebase/auth";
-import { getDocs, collection } from "firebase/firestore";
+import { doc, getDoc, getDocs, collection } from "firebase/firestore";
 
 export const authContext = createContext();
 
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  const { user, loading, modalMessage, error, ifVisited, ifLogin, feature } = state;
+  const {
+    user,
+    loading,
+    modalMessage,
+    error,
+    ifVisited,
+    ifLogin,
+    feature,
+    featLoad,
+    isro,
+    isroLoad,
+  } = state;
 
   const setSideBarOpen = (sideBarState) =>
     dispatch({ type: "SIDEBAR", payload: sideBarState });
@@ -50,6 +61,8 @@ const AuthContextProvider = (props) => {
     dispatch({ type: "LOADING", payload: false });
   };
 
+  let today = new Date().toLocaleString("en-ca").slice(0, 10);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (curruntUser) => {
       dispatch({ type: "USER", payload: curruntUser });
@@ -68,20 +81,46 @@ const AuthContextProvider = (props) => {
       }
     });
 
-    const getData = async () => {
-      const snapshot = collection(db, "FEATURES");
-      const docsSnap = await getDocs(snapshot);
+    const getFeatureData = async () => {
+      dispatch({ type: "FEAT-LOAD", payload: true });
+      try {
+        const snapshot = collection(db, "FEATURES");
+        const docsSnap = await getDocs(snapshot);
 
-      const transformedFeatures = [];
+        const transformedFeatures = [];
 
-      docsSnap.forEach((doc) => {
-        transformedFeatures.push(doc.data());
-      });
+        docsSnap.forEach((doc) => {
+          transformedFeatures.push(doc.data());
+        });
 
-      dispatch({ type: "FEATURE", payload: transformedFeatures });
+        dispatch({ type: "FEATURE", payload: transformedFeatures });
+      } catch (error) {
+        dispatch({ type: "ERROR", payload: true });
+        dispatch({ type: "MODAL-MESSAGE", payload: error.code });
+      }
+      dispatch({ type: "FEAT-LOAD", payload: false });
     };
 
-    getData();
+    const getIsroData = async () => {
+      dispatch({ type: "ISRO-LOAD", payload: true });
+      try {
+        const docRef = doc(db, "ISRO-DATA", "ISRO-DATA");
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          dispatch({ type: "ISRO", payload: docSnap.data().isroData });
+        } else {
+          throw new Error("Invalid Request!");
+        }
+      } catch (error) {
+        dispatch({ type: "ERROR", payload: true });
+        dispatch({ type: "MODAL-MESSAGE", payload: error.code });
+      }
+      dispatch({ type: "ISRO-LOAD", payload: false });
+    };
+
+    getFeatureData();
+    getIsroData();
 
     return () => unsubscribe();
   }, []);
@@ -112,6 +151,10 @@ const AuthContextProvider = (props) => {
     ifLogin,
     loginHandeler,
     feature,
+    featLoad,
+    isro,
+    isroLoad,
+    today
   };
 
   return (

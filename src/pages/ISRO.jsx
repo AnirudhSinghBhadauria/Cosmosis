@@ -1,12 +1,14 @@
-import React, { Fragment, memo } from "react";
-import { earthTop, homiBhabha, isroCycle1, isroCycle2 } from "../assets/Links";
+import React, { Fragment, memo, useContext } from "react";
 import classes from "./styles/isro.module.scss";
-import { HomiBhabha, VikramSarabhai } from "../assets/data";
+import {astro} from '../assets/Links'
 import ScientistSection from "../components/ScientistSection";
 
+import { earthTop, isroCycle1, isroCycle2 } from "../assets/Links";
+import { authContext } from "../store/AuthContextProvider";
+
 const ISRO = () => {
-  const astronaut =
-    "https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/astronaut%20floating.webp?alt=media&token=6e1680ab-48fc-4f4c-94cb-016560b7685c";
+  const { isro } = useContext(authContext);
+
   return (
     <Fragment>
       <section className={classes.main}>
@@ -21,8 +23,8 @@ const ISRO = () => {
             fetchpriority="high"
             loading="eager"
             decoding="async"
-            src={astronaut}
-            alt="floating Astronaut"
+            src={astro}
+            alt='astronaut'
           />
         </div>
         <aside>
@@ -65,14 +67,14 @@ const ISRO = () => {
       </section>
 
       <ScientistSection
-        image={HomiBhabha.image}
-        quote={HomiBhabha.quote}
-        year={HomiBhabha.year}
-        name={HomiBhabha.name}
-        paraOne={HomiBhabha.paraOne}
-        paraTwo={HomiBhabha.paraTwo}
-        paraThree={HomiBhabha.paraThree}
-        paraFour={HomiBhabha.paraFour}
+        image={isro[0]?.image}
+        quote={isro[0]?.quote}
+        year={isro[0]?.year}
+        name={isro[0]?.name}
+        paraOne={isro[0]?.paraOne}
+        paraTwo={isro[0]?.paraTwo}
+        paraThree={isro[0]?.paraThree}
+        paraFour={isro[0]?.paraFour}
       />
 
       <section className={classes.firstPhotoSection}>
@@ -90,14 +92,14 @@ const ISRO = () => {
       </section>
 
       <ScientistSection
-        image={VikramSarabhai.image}
-        quote={VikramSarabhai.quote}
-        year={VikramSarabhai.year}
-        name={VikramSarabhai.name}
-        paraOne={VikramSarabhai.paraOne}
-        paraTwo={VikramSarabhai.paraTwo}
-        paraThree={VikramSarabhai.paraThree}
-        paraFour={VikramSarabhai.paraFour}
+        image={isro[1]?.image}
+        quote={isro[1]?.quote}
+        year={isro[1]?.year}
+        name={isro[1]?.name}
+        paraOne={isro[1]?.paraOne}
+        paraTwo={isro[1]?.paraTwo}
+        paraThree={isro[1]?.paraThree}
+        paraFour={isro[1]?.paraFour}
       />
 
       <section className={classes.secondPhotoSection}>
