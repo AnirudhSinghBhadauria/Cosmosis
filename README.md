@@ -3,6 +3,7 @@
 Cosmosis is an exciting space-themed website that offers a wealth of information about space exploration and related topics. Visitors can explore the latest updates from organizations like ISRO, NASA, and Astronomy Picture of the Day (APOD). The website also features in-depth articles on the history of ISRO and many other exciting observations.
 
 <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10">
+<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012405.jpg?alt=media&token=18b60495-4bcf-490b-a372-5e09d6b2265e">
 
 ## Features
 
@@ -12,18 +13,19 @@ Cosmosis is an exciting space-themed website that offers a wealth of information
 - Comprehensive coverage of space-related topics.
 - Progressive Web App (PWA Cerified)
 
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_09_51.png?alt=media&token=dbdb8163-b514-4320-a779-87fd63e5d8df">
+
 
 ## [ISRO](https://www.isro.gov.in/)
 
 The Indian Space Research Organisation (ISRO) is a premier space agency that has made significant contributions to India's space program. Our website provides detailed information on the history and achievements of ISRO.
 
-<video src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%202023-02-27%2001-12-09.mp4?alt=media&token=df9d72aa-a688-46d0-a276-ecede5aadb4a" muted autoplay type="video/mp4">
-</video>
+<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2002_36_02.png?alt=media&token=185b8e29-26b4-4e10-b309-aa16bfc48f22">
 
 ## [NASA](https://www.nasa.gov/)
 
 The National Aeronautics and Space Administration (NASA) is one of the most well-known space agencies in the world. Our website covers the latest news and updates from NASA, including their various missions and projects.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_16_49.png?alt=media&token=044353fe-515d-4911-a4c2-68a816a88520">
 
 ## [Curosity](https://en.wikipedia.org/wiki/Curiosity)
 
