@@ -1,7 +1,8 @@
 # [Cosmosis](https://cosmosis.vercel.app/)
 Cosmosis is an exciting space-themed website that offers a wealth of information about space exploration and related topics. Visitors can explore the latest updates from organizations like ISRO, NASA, and Astronomy Picture of the Day (APOD). The website also features in-depth articles on the history of ISRO and many other exciting observations.
 
-[![An old rock in the desert](https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10)
+[![cosmosis headfrount](https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10)
+[![cosmosis frount](https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20%E2%80%94%20Firefox%20Developer%20Edition%2027.2.23%2001_09_51.png?alt=media&token=dbdb8163-b514-4320-a779-87fd63e5d8df)
 
 ## Features
 - In-depth articles on the history of ISRO.
