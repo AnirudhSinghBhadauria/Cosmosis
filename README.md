@@ -17,11 +17,11 @@ The Indian Space Research Organisation (ISRO) is a premier space agency that has
 The National Aeronautics and Space Administration (NASA) is one of the most well-known space agencies in the world. Our website covers the latest news and updates from NASA, including their various missions and projects.
 
 
-## [Curosity]([https://mars.nasa.gov/msl/](https://en.wikipedia.org/wiki/Curiosity))
+## [Curosity](https://mars.nasa.gov/msl/](https://en.wikipedia.org/wiki/Curiosity)
 The Mars rover Curiosity has been exploring the Red Planet since 2012, and has made many important discoveries about the planet's history and environment. Our website covers the latest news and findings from the Curiosity mission.
 
 
-## [APOD]([https://apod.nasa.gov/apod/astropix.html](https://en.wikipedia.org/wiki/Astronomy_Picture_of_the_Day))
+## [APOD](https://apod.nasa.gov/apod/astropix.html](https://en.wikipedia.org/wiki/Astronomy_Picture_of_the_Day)
 Astronomy Picture of the Day (APOD) is a popular website that features stunning photographs of space and the universe. Our website provides a feed of the latest APOD posts, so you can keep up to date with the latest images and discoveries.
 
 
