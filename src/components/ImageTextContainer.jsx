@@ -20,7 +20,7 @@ const ImageTextContainer = (props) => {
           <h1 className={props.ifLoading ? 'loading' : ""}>
             {props.title}
           </h1>
-          <p className={props.ifLoading ? 'loading' : ""}>
+          <p className={props.ifLoading ? `${classes.loading} + loading` : ""}>
             {props.explanation}
           </p>
         </div>

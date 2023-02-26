@@ -40,9 +40,9 @@
     }
     p {
       font-family: $heading-font;
-      font-size: 1.15rem;
+      font-size: clamp(0.85rem,1.65vw,1.15rem);
       overflow-y: scroll;
-      max-height: 20rem;
+      max-height: 17rem;
     }
   }
 }
@@ -56,4 +56,6 @@
   animation: skelly 600ms infinite alternate;
   opacity: 1;
 }
-
+.loading{
+  min-height: 10rem;
+}

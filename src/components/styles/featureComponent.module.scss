@@ -8,14 +8,14 @@
   div:nth-of-type(1) {
     @include flex(column, flex-start, flex-start);
     color: white;
-    width: clamp(17.75rem, 35.5vw, 35rem);
+    width: clamp(19.25rem, 38.5vw, 38rem);
     padding: 2rem;
     gap: 2rem;
     border-left: 2px solid white;
 
     p {
       font-family: $heading-font;
-      font-size: 1.2rem;
+      font-size: clamp(0.8rem, 1.6vw, 1.1rem);
       text-align: left;
     }
     .link {
@@ -23,7 +23,7 @@
       gap: 1rem;
       color: white;
       font-family: $heading-font;
-      font-size: 1.1rem;
+      font-size: clamp(0.8rem, 1.6vw, 1.1rem);
 
       svg {
         transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
