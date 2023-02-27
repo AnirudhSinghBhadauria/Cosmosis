@@ -6,8 +6,10 @@ Cosmosis is an exciting space-themed website that offers a wealth of information
   
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012511.jpg?alt=media&token=c85ecafe-90f6-4bfb-bce7-e89f266bbd3a" width="300" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012528.jpg?alt=media&token=6be62f87-94b4-46a0-8232-b68987f93e9b" width="300" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012550.jpg?alt=media&token=796b02d2-80b7-427d-a2ff-62a7e3e7e14d" width="250" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012604.jpg?alt=media&token=fc686940-7fed-404a-b02b-41de7872fa2c" width="250" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012624.jpg?alt=media&token=1549ceef-04ae-4bbf-91c2-89a28c431f14" width="250" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012728.jpg?alt=media&token=4f37f345-18c3-44cb-a59e-065fc9f8bb3f" width="250" />
 </p>
 
 ## Features
