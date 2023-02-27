@@ -30,11 +30,11 @@ Cosmosis has been developed as a Progressive Web App (PWA) using React. As a PWA
   <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012258.jpg?alt=media&token=273a56e0-39d2-4d7d-82d3-b20c840200cb" width="300" />
 </p>
 
-## Gallery
+## [Gallery](https://www.behance.net/gallery/164756167/Cosmosis)
 
 "Step into our cosmosis gallery and marvel at the beauty of the universe. Our collection showcases the vastness and diversity of space. Take your time and enjoy the stunning images captured by telescopes and space probes. We hope this gallery inspires you to learn more about our universe and appreciate its wonders. Happy exploring!"
 
-<button style="background: black;"><a href="https://www.google.com">Gallery -></a></button>
+- **<a href="https://www.google.com">GALLERY ------></a>**
 
 ## Login
 
