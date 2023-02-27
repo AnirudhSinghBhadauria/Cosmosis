@@ -2,10 +2,8 @@
 
 Cosmosis is an exciting space-themed website that offers a wealth of information about space exploration and related topics. Visitors can explore the latest updates from organizations like ISRO, NASA, and Astronomy Picture of the Day (APOD). The website also features in-depth articles on the history of ISRO and many other exciting observations.
 
-<p float="left" align="center" >
-<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10" width="600" /> 
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012405.jpg?alt=media&token=18b60495-4bcf-490b-a372-5e09d6b2265e" width="300" />
-</p>
+<img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FCosmosis%20_%20Void%20-%20Google%20Chrome%2027.2.23%2001_36_46.png?alt=media&token=67ae21a2-cee9-4944-8720-0edc5eb1ac10"/> 
+  
 
 <p float="left" align="center">
   <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012511.jpg?alt=media&token=c85ecafe-90f6-4bfb-bce7-e89f266bbd3a" width="300" />
