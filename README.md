@@ -6,10 +6,10 @@ Cosmosis is an exciting space-themed website that offers a wealth of information
   
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012742.jpg?alt=media&token=e1378d25-64e4-4e07-a487-f44ae8d4811e" width="225" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012550.jpg?alt=media&token=796b02d2-80b7-427d-a2ff-62a7e3e7e14d" width="225" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012604.jpg?alt=media&token=fc686940-7fed-404a-b02b-41de7872fa2c" width="225" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012624.jpg?alt=media&token=1549ceef-04ae-4bbf-91c2-89a28c431f14" width="225" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012742.jpg?alt=media&token=e1378d25-64e4-4e07-a487-f44ae8d4811e" width="200" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012550.jpg?alt=media&token=796b02d2-80b7-427d-a2ff-62a7e3e7e14d" width="200" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012604.jpg?alt=media&token=fc686940-7fed-404a-b02b-41de7872fa2c" width="200" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012624.jpg?alt=media&token=1549ceef-04ae-4bbf-91c2-89a28c431f14" width="200" />
 </p>
 
 ## Features
@@ -25,9 +25,9 @@ Cosmosis is an exciting space-themed website that offers a wealth of information
 Cosmosis has been developed as a Progressive Web App (PWA) using React. As a PWA, Cosmosis offers a fast and reliable browsing experience to its users, even in areas with poor network connectivity. It can be accessed from any device with a web browser, and **it offers an app-like experience** with features such as push notifications, offline support, and the ability to add to the home screen.
 
 <p float="left" align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012405.jpg?alt=media&token=18b60495-4bcf-490b-a372-5e09d6b2265e" width="300" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012432.jpg?alt=media&token=b1177988-f56a-4a42-9b3a-bd096f80eac3" width="300" />
-  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012258.jpg?alt=media&token=273a56e0-39d2-4d7d-82d3-b20c840200cb" width="300" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012405.jpg?alt=media&token=18b60495-4bcf-490b-a372-5e09d6b2265e" width="250" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012432.jpg?alt=media&token=b1177988-f56a-4a42-9b3a-bd096f80eac3" width="250" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/cosmosis-ff4d9.appspot.com/o/ReadMe%20Pictures%2FIMG_20230227_012258.jpg?alt=media&token=273a56e0-39d2-4d7d-82d3-b20c840200cb" width="250" />
 </p>
 
 ## [Gallery](https://www.behance.net/gallery/164756167/Cosmosis)
